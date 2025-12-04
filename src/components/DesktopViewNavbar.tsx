@@ -1,0 +1,42 @@
+import { Link, useLocation, useNavigate } from 'react-router';
+
+const DesktopViewNavbar = () => {
+
+    const items : Array<string> = ['Home', 'Projects', 'Research', 'Technovation', 'Achivements', 'About Us']
+
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const getPath =  (item : string) : string => {
+        if(item === 'home') return '/'
+        return '/' + item.replace(' ', '-')
+    }
+    
+    return (
+        <div className='w-[95%] h-14 bg-black/30 
+                        backdrop-blur-xl fixed top-2 left-1/2 
+                        -translate-x-1/2 shadow-2xl rounded-2xl 
+                        flex justify-center items-center
+                        gap-5'
+        >
+            <div className='w-[30%] flex justify-center items-center'>
+                <img 
+                    src="/images/ctf.png" 
+                    className='h-28 cursor-pointer'
+                    onClick={() => navigate('https://www.cegtechforum.in/')} 
+                    alt="ctf-image" />
+            </div>
+            <div className='w-[70%] flex gap-6 justify-center'>
+                {items.map((item, idx) => (
+                    <Link 
+                        key={idx}
+                        to={item === 'Home' ? '/' : item.toLowerCase().replace(' ', '-')}
+                        className={location.pathname === getPath(item.toLowerCase()) ? 'text-black underline' : 'text-white'}
+                    >{item}</Link>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+export default DesktopViewNavbar;
