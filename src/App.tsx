@@ -3,6 +3,7 @@ import Home from "./Pages/Home.tsx";
 import DesktopViewNavbar from "./components/DesktopViewNavbar.tsx";
 import MobileViewNavbar from "./components/MobileViewNavbar.tsx";
 import { useEffect, useState } from "react";
+import AboutUs from "./Pages/AboutUs.tsx";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
 			<div className="pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"> 
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/about-us" element={<AboutUs />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
