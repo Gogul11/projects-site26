@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import "tailwindcss";
 
 body{
@@ -7,4 +9,15 @@ body{
     background: -webkit-linear-gradient(to left, #4286f4, #373B44);  
     background: linear-gradient(to left, #4286f4, #373B44); 
     color: white;
+}
+
+.rock-salt{
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+}
+
+.bruno-ace-sc-regular {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
