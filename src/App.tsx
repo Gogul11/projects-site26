@@ -25,7 +25,7 @@ function App() {
 				<DesktopViewNavbar />  
 			}
 		
-			<div className="pt-16 px-14"> 
+			<div className="pt-16 px-14 max-sm:px-6 max-md:px-10"> 
 				<Routes>
 					<Route path="/" element={<Home />} />
 				</Routes>
