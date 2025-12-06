@@ -22,7 +22,7 @@ const MobileViewNavbar = () => {
             <div className='w-[95%] h-14 bg-black/30 
                             backdrop-blur-md fixed top-2 left-1/2 
                             -translate-x-1/2 shadow-lg rounded-2xl 
-                            flex justify-center items-center px-2'
+                            flex justify-center items-center px-2 z-50'
                             >
                 <div className="w-[10%] flex justify-center items-center">
                     <FaGear 
@@ -48,7 +48,7 @@ const MobileViewNavbar = () => {
                                 rounded-2xl shadow-lg p-1
                                 flex flex-col justify-center
                                 items-center gap-5
-                                transform transition-all duration-300
+                                transform transition-all duration-300 z-50
                                 ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 >
                     {items.map((item, idx) => (

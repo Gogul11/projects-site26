@@ -17,7 +17,7 @@ const DesktopViewNavbar = () => {
                         backdrop-blur-xl fixed top-2 left-1/2 
                         -translate-x-1/2 shadow-2xl rounded-2xl 
                         flex justify-center items-center
-                        gap-5'
+                        gap-5 z-50'
         >
             <div className='w-[30%] flex justify-center items-center'>
                 <img 
