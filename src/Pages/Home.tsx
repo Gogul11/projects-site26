@@ -3,11 +3,11 @@ import Drone from "../components/Drone";
 const Home = () => {
     return (
         <div 
-            className="h-screen w-full flex flex-col-reverse justify-center items-center 
+            className="h-screen w-full flex flex-col 
                         md:flex-row"
         >
             <div 
-                className="w-full h-[50%] flex flex-col justify-center items-center gap-4
+                className="w-full h-[40%] flex flex-col justify-center items-center gap-4
                            md:w-[50%] md:h-full " 
             >
                 <p 
@@ -46,7 +46,7 @@ const Home = () => {
             </div>
 
             <div 
-                className="w-full h-[30%] md:w-[50%] md:h-full "
+                className="w-full h-[40%] md:w-[50%] md:h-full "
             >
                 <Drone></Drone>
             </div>
