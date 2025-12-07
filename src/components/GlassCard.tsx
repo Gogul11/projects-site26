@@ -1,51 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { FaGear } from "react-icons/fa6";
 
 interface CardProps {
   title: string;
   content: string;
   image: string;
+  onClose: () => void;
 }
 
-const GlassCard: React.FC<CardProps> = ({ title, content, image }) => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setShow(true), 100);
-  }, []);
+const GlassCard: React.FC<CardProps> = ({ title, content, image, onClose }) => {
 
   return (
-    <div
-			className={`
-				relative z-0
-				h-[650px]
-				rounded-3xl overflow-hidden shadow-2xl shadow-black/30
-				transition-all duration-700 mx-auto
+    <div 
+		className="bg-black/20 fixed inset-0 z-50 p-4 overflow-y-auto backdrop-blur-2xl flex sm:justify-center sm:items-center "
+		onClick={onClose}
+	>
+       	
+		<button className="absolute top-8 right-8 text-white hover:text-red-400 z-10 cursor-pointer" onClick={onClose}>
+         	<FaGear size={24} />
+        </button>
 
-				${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
-			`}
-			style={{
-				backgroundImage: `url(${image})`, //TODO : Add new images
-				backgroundSize: "cover",
-				backgroundPosition: "center",
-			}}
+		<div 
+			className="bg-black/50 h-fit rounded-3xl md:w-[50%] lg:w-[40%]"
+			onClick={(e) => e.stopPropagation()}
 		>
-		{/* Glass Layer */}
-			<div className="
-				absolute inset-0  z-0
-				bg-white/10 
-				backdrop-blur-sm 
-				border border-white/20
-				rounded-3xl
-				p-6 flex flex-col justify-center
-			">
-				<h2 className="text-3xl font-bold text-white drop-shadow-lg">
-					{title}
-				</h2>
+	    	<img src={image} alt={title} className="w-full h-64 object-cover rounded-t-3xl" />
 
-				<p className="text-blue-500 font-extrabold mt-3 leading-relaxed">
-					{content}
-				</p>
-			</div>
+			<div className="p-6 flex flex-col">
+    	       <h2 className="text-3xl font-bold text-white my-1 rock-salt">{title}</h2>
+        	   <p className="text-white/90 mt-4 text-lg leading-relaxed">{content}</p>
+         	</div>
+		</div>
+
     </div>
   );
 };

@@ -48,7 +48,7 @@ const Home = () => {
             <div 
                 className="w-full h-[40%] md:w-[50%] md:h-full "
             >
-                {/* <Drone></Drone> */}
+                <Drone></Drone>
             </div>
         </div>
     );

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Contact from '../components/Contact';
 import { IoMdMail } from "react-icons/io";
 import GlassCard from '../components/GlassCard';
+import { FaCaretSquareRight } from "react-icons/fa";
 
 const AboutUs = () => {
 
@@ -23,59 +24,51 @@ const AboutUs = () => {
         }
     ];
 
-    const [activeId, setActiveId] = useState<number>(0)
-
-    useEffect(() => {
-        const id = setInterval(() => {
-            setActiveId(prev => (prev + 1) % cards.length)
-        }, 5000)
-
-        return () => clearInterval(id)
-    }, [])
+    const [activeCard, setActiveCard] = useState<number | null>(null);
 
     return (
-        <div className='w-full h-screen flex flex-col gap-4
-                        md:flex-row'>
-           
-           <div className='w-full md:h-full md:w-[50%] flex flex-col justify-center gap-6 py-4'>
-                <div>
-                    <GlassCard
-                        title={cards[activeId].title}
-                        content={cards[activeId].content}
-                        image={cards[activeId].image}
-                    />
-                </div>
-
-                <div className="flex gap-2 mt-3 w-full justify-center">
-                    {cards.map((_, idx) => (
-                        <div
-                            key={idx}
-                            onClick={() => setActiveId(idx)}
-                            className={`cursor-pointer transition-all duration-300 ${
-                                activeId === idx
-                                    ? "w-6 h-2 bg-white/70 rounded-full"
-                                    : "w-2 h-2 bg-white/40 rounded-full"
-                            }`}
-                        ></div>
-                    ))}
-                </div>
-
-
-            </div>
-            <div className=' w-full flex flex-col justify-center items-center gap-4
-                            md:h-full md:w-[50%] pb-4'>
+        <div className='w-full h-screen flex flex-col justify-center items-center gap-4 md:flex-row'> 
+            
+            <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
+                <p
+                    className='rock-salt text-3xl max-[420px]:text-2xl max-xs'
+                >Meet our purpose</p>
+                {cards.map((card, idx) => (
+                    <div
+                        key={idx}
+                        className="px-6 py-3 bg-white/20 rounded-lg 
+                                    backdrop-blur-sm hover:bg-[#dd1818]/20 cursor-pointer 
+                                    flex items-center gap-5 max-w-[350px] w-[300px] max-[350px]:w-fit"
+                        onClick={() => setActiveCard(idx)}
+                    >
+                        <FaCaretSquareRight size={20} />
+                        {card.title}
+                    </div>
+                ))}
+            </div> 
+            
+            <div className='h-[50%] w-full flex flex-col justify-center items-center gap-4 md:h-full md:w-[50%]'> 
                 <a 
-                    className='flex justify-center items-center w-fit gap-1 bg-black/20 rounded-lg px-2 py-1'
-                    href='mailto:projecct@cegtechforum.in'
-                >
-                    <IoMdMail size={20} color='yellow' />
-                    <p>projects@cegtechforum.in</p>
-                </a>
-                <Contact name='Gogul' number='9943638746' url='https://google.com'/>
-                <Contact name='Gogul' number='9943638746' url='h.com'/>
-                <Contact name='Gogul' number='9943638746' url='h.com'/>
-                <Contact name='Gogul' number='9943638746' url='h.com'/>
-            </div>
+                    className='flex justify-center items-center w-fit gap-1 bg-black/20 rounded-lg px-2 py-1' 
+                    href='mailto:projecct@cegtechforum.in' 
+                > 
+                    <IoMdMail size={20} color='yellow' /> 
+                    <p>projects@cegtechforum.in</p> 
+                </a> 
+                <Contact name='Gogul' number='9943638746' url='https://google.com'/> 
+                <Contact name='Gogul' number='9943638746' url='h.com'/> 
+                <Contact name='Gogul' number='9943638746' url='h.com'/> 
+                <Contact name='Gogul' number='9943638746' url='h.com'/> 
+            </div> 
+
+            {activeCard !== null && (
+                <GlassCard
+                    title={cards[activeCard].title}
+                    content={cards[activeCard].content}
+                    image={cards[activeCard].image}
+                    onClose={() => setActiveCard(null)}
+                />
+            )}
         </div>
     );
 }
