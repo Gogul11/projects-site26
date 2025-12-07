@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router";
 import Drone from "../components/Drone";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Home = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div 
             className="h-screen w-full flex flex-col 
@@ -10,7 +15,7 @@ const Home = () => {
                 className="w-full h-[40%] flex flex-col justify-center items-center gap-4
                            md:w-[50%] md:h-full " 
             >
-                <p 
+                <a 
                     className="text-[40px]
                                bg-linear-to-r from-red-300 to-orange-600
                                bg-clip-text text-transparent 
@@ -19,9 +24,11 @@ const Home = () => {
                                md:text-[65px]
                                lg:text-[70px]
                                xl:text-[90px]" 
+                    href="https://cegtechforum.in/"
+                    target="_blank"
                 >
                     CTF
-                </p>
+                </a>
 
                 <p 
                     className="bruno-ace-sc-regular 
@@ -43,11 +50,26 @@ const Home = () => {
                 >
                     "Giving Life to ideas"
                 </p>
+                <p
+                    className="text-xl my-2 cursor-pointer flex gap-2 items-center text-[#4286f4] md:text-2xl"
+                    onClick={() => navigate("/technovation")}
+                >
+                    Technovation <FaExternalLinkAlt />
+                </p>
             </div>
 
             <div 
                 className="w-full h-[40%] md:w-[50%] md:h-full "
+                    style={{
+                        backgroundImage : "url('/images/ctf-logo.png')",
+                        backgroundSize: "contain",       
+                        backgroundRepeat: "no-repeat",  
+                        backgroundPosition: "center",
+                    }} 
             >
+                <div
+                    className="relative left-1/2 -translate-x-1/2 h-2 z-50 animate-slideBar rounded-2xl bg-[#dd1818] w-[60%] backdrop-blur-2xl"
+                />
                 <Drone></Drone>
             </div>
         </div>

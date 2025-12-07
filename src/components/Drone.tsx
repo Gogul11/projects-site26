@@ -50,7 +50,7 @@ const Drone: React.FC = () => {
 			const containerHeight : number = mountRef.current.clientHeight;
 
 			
-			if(containerHeight < 400){
+			if(containerHeight < 500){
 				console.log("hell0")
 				if (containerWidth < 250){
 					model.scale.set(0.7, 0.7, 0.7);
