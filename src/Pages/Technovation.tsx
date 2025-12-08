@@ -12,7 +12,7 @@ const Technovation = () => {
     const [currentImage, setCurrentImage] = useState<number>(0)
 
     useEffect(() => {
-        const imageInterval = setTimeout(() => {
+        const imageInterval = setInterval(() => {
             setCurrentImage(prev => (prev + 1) % images.length)
         }, 2000);
 

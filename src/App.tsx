@@ -5,6 +5,7 @@ import MobileViewNavbar from "./components/MobileViewNavbar.tsx";
 import { useEffect, useState } from "react";
 import AboutUs from "./Pages/AboutUs.tsx";
 import Technovation from "./Pages/Technovation.tsx";
+import Projects from "./Pages/Projects.tsx";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/technovation" element={<Technovation />} />
+					<Route path="/projects" element={<Projects />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
