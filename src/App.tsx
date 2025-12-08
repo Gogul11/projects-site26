@@ -4,6 +4,7 @@ import DesktopViewNavbar from "./components/DesktopViewNavbar.tsx";
 import MobileViewNavbar from "./components/MobileViewNavbar.tsx";
 import { useEffect, useState } from "react";
 import AboutUs from "./Pages/AboutUs.tsx";
+import Technovation from "./Pages/Technovation.tsx";
 
 function App() {
 
@@ -26,10 +27,11 @@ function App() {
 				<DesktopViewNavbar />  
 			}
 		
-			<div className="pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"> 
+			<div className="p-0"> 
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about-us" element={<AboutUs />} />
+					<Route path="/technovation" element={<Technovation />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

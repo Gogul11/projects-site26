@@ -12,6 +12,8 @@ body{
     background: -webkit-linear-gradient(to left, #dd1818, #333333); 
     background: linear-gradient(to left, #dd1818, #333333); 
     color: white;
+    padding: 0;
+    margin: 0;
 }
 
 .rock-salt{
@@ -26,20 +28,30 @@ body{
 }
 
 @keyframes slideBar {
-  0% {
-    top: 10%;
-    box-shadow: 0 0 5px #dd1818, 0 0 15px #dd1818, 0 0 25px #dd1818;
-  }
-  50%{
-    top: 90%;
-    box-shadow: 0 0 20px #dd1818, 0 0 40px #dd1818, 0 0 60px #dd1818;
-  }
-  100% {
-    top: 10%;
-    box-shadow: 0 0 5px #dd1818, 0 0 15px #dd1818, 0 0 25px #dd1818;
-  }
+    0% {
+      top: 10%;
+      box-shadow: 0 0 5px #dd1818, 0 0 15px #dd1818, 0 0 25px #dd1818;
+    }
+    50%{
+      top: 90%;
+      box-shadow: 0 0 20px #dd1818, 0 0 40px #dd1818, 0 0 60px #dd1818;
+    }
+    100% {
+      top: 10%;
+      box-shadow: 0 0 5px #dd1818, 0 0 15px #dd1818, 0 0 25px #dd1818;
+    }
 }
 
 .animate-slideBar {
-  animation: slideBar 6s linear infinite;
+   animation: slideBar 6s linear infinite;
+}
+
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
 }

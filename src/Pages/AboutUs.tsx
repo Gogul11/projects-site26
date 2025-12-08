@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Contact from '../components/Contact';
 import { IoMdMail } from "react-icons/io";
 import GlassCard from '../components/GlassCard';
@@ -27,7 +27,8 @@ const AboutUs = () => {
     const [activeCard, setActiveCard] = useState<number | null>(null);
 
     return (
-        <div className='w-full h-screen flex flex-col justify-center items-center gap-4 md:flex-row'> 
+        <div className='w-full h-screen flex flex-col justify-center items-center gap-4 md:flex-row
+                        pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'> 
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
@@ -47,7 +48,7 @@ const AboutUs = () => {
                 ))}
             </div> 
             
-            <div className='h-[50%] w-full flex flex-col justify-center items-center gap-4 md:h-full md:w-[50%]'> 
+            <div className='h-[50%] w-full flex flex-col justify-center items-center gap-4 md:h-full md:w-[50%] mb-4'> 
                 <a 
                     className='flex justify-center items-center w-fit gap-1 bg-black/20 rounded-lg px-2 py-1' 
                     href='mailto:projecct@cegtechforum.in' 

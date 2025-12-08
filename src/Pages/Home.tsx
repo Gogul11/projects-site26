@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div 
             className="h-screen w-full flex flex-col 
-                        md:flex-row"
+                        md:flex-row pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"
         >
             <div 
                 className="w-full h-[40%] flex flex-col justify-center items-center gap-4
