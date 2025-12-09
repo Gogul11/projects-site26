@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import AboutUs from "./Pages/AboutUs.tsx";
 import Technovation from "./Pages/Technovation.tsx";
 import Projects from "./Pages/Projects.tsx";
+import Research from "./Pages/Research.tsx";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/technovation" element={<Technovation />} />
 					<Route path="/projects" element={<Projects />} />
+					<Route path="/research" element={<Research />} />
 				</Routes>
 			</div>
 		</BrowserRouter>

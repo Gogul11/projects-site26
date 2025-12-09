@@ -11,15 +11,15 @@ const Year:React.FC<yearProps> = (props) => {
             <IoMdArrowDropleftCircle 
                 onClick={() => props.setYear(prev => prev - 1)}
                 className="cursor-pointer"
-                size={30}
+                size={40}
             />
 
-            <p className="text-3xl">{props.year}</p>
+            <p className="text-5xl">{props.year}</p>
 
             <IoMdArrowDroprightCircle 
                 onClick={() => props.setYear(prev => prev + 1)}
                 className="cursor-pointer"
-                size={30}
+                size={40}
             />
         </div>
     );

@@ -1,6 +1,13 @@
+interface Person{
+  name:string;
+  link?:string;
+  role?:string;
+}
 interface Project {
   name: string;
   description: string;
+  link?: string;
+  teamMembers?: Array<Person>;
 }
 
 interface YearProjects {
@@ -16,6 +23,25 @@ export const yearWiseProjects: Array<YearProjects> = [
         name: "Smart Irrigation System",
         description:
           "Automatically waters plants based on soil moisture levels and sends IoT-based alerts.",
+        link : "https://gogul11.github.io/portfolio",
+        teamMembers: [
+          {
+            name: "Arjun R",
+            role: "Frontend Developer",
+            link: "https://www.linkedin.com/in/arjunr"
+          },
+          {
+            name: "Meera S",
+            role: "Backend Developer",
+            link: "https://www.linkedin.com/in/meeradev"
+          },
+          {
+            name: "Karthik M",
+            role: "UI/UX Designer",
+            link: "https://dribbble.com/karthikdesigns"
+          }
+        ]
+
       },
       {
         name: "TaskFlow",
