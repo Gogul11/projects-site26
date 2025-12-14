@@ -17,8 +17,7 @@ const Home = () => {
             >
                 <a 
                     className="text-[40px]
-                               bg-linear-to-r from-red-300 to-orange-600
-                               bg-clip-text text-transparent 
+                               text-[#dd1818] 
                                bruno-ace-sc-regular
                                sm:text-[50px]
                                md:text-[65px]
@@ -67,9 +66,9 @@ const Home = () => {
                         backgroundPosition: "center",
                     }} 
             >
-                <div
+                {/* <div
                     className="relative left-1/2 -translate-x-1/2 h-2 z-50 animate-slideBar rounded-2xl bg-[#dd1818] w-[60%] backdrop-blur-2xl"
-                />
+                /> */}
                 <Drone></Drone>
             </div>
         </div>

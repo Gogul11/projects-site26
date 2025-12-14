@@ -37,8 +37,8 @@ const AboutUs = () => {
                 {cards.map((card, idx) => (
                     <div
                         key={idx}
-                        className="px-6 py-3 bg-white/20 rounded-lg 
-                                    backdrop-blur-sm hover:bg-[#dd1818]/20 cursor-pointer 
+                        className="px-6 py-3 bg-white/10 rounded-lg
+                                    backdrop-blur-sm cursor-pointer
                                     flex items-center gap-5 max-w-[350px] w-[300px] max-[350px]:w-fit"
                         onClick={() => setActiveCard(idx)}
                     >
@@ -50,7 +50,7 @@ const AboutUs = () => {
             
             <div className='h-[50%] w-full flex flex-col justify-center items-center gap-4 md:h-full md:w-[50%] mb-4'> 
                 <a 
-                    className='flex justify-center items-center w-fit gap-1 bg-black/20 rounded-lg px-2 py-1' 
+                    className='flex justify-center items-center w-fit gap-1 bg-white/10 border border-[#c53102] rounded-lg px-2 py-1' 
                     href='mailto:projecct@cegtechforum.in' 
                 > 
                     <IoMdMail size={20} color='yellow' /> 

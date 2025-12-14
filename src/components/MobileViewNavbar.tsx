@@ -19,7 +19,7 @@ const MobileViewNavbar = () => {
 
     return (
         <>
-            <div className='w-[95%] h-14 bg-black/30 
+            <div className='w-[95%] h-14 bg-white/10 border border-[#c53102]
                             backdrop-blur-md fixed top-2 left-1/2 
                             -translate-x-1/2 shadow-lg rounded-2xl 
                             flex justify-center items-center px-2 z-50'
@@ -44,18 +44,19 @@ const MobileViewNavbar = () => {
                 <div className={`fixed top-1/2 left-1/2
                                 -translate-x-1/2 -translate-y-1/2 h-[50%] 
                                 w-[60%] max-sm:w-[90%] max-md:w[70%]
-                                bg-black/30 backdrop-blur-md mx-auto
+                                bg-white/10 backdrop-blur-xl mx-auto border border-[#c53102]
                                 rounded-2xl shadow-lg p-1
                                 flex flex-col justify-center
                                 items-center gap-5
-                                transform transition-all duration-300 z-50
+                                transform transition-all duration-300 z-50 text-lg
                                 ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 >
                     {items.map((item, idx) => (
                         <Link 
                             key={idx}
                             to={item === 'Home' ? '/' : item.toLowerCase().replace(' ', '-')}
-                            className={location.pathname === getPath(item.toLowerCase()) ? 'text-black underline' : 'text-white'}
+                            className={location.pathname === getPath(item.toLowerCase()) ? 
+                                        'text-[#c53102] underline font-extrabold' : 'text-white'}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >{item}</Link>
                     ))}

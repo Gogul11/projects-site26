@@ -60,7 +60,7 @@ const Projects = () => {
             projects.length === 0 
                 ?
                     <div className='w-full flex flex-col gap-10 justify-center items-center h-full my-10'>
-                        <p className='text-xl rock-salt'>This year's projects are coming soon</p>
+                        <p className='text-2xl rock-salt'>This year's projects are coming soon</p>
                         
                         <img
                             src="/images/gear.png"
@@ -79,9 +79,9 @@ const Projects = () => {
                             {projects.map((project, idx) => (
                                 <div
                                     key={idx}
-                                    className='bg-white px-2 py-1 rounded-md max-md:whitespace-nowrap 
-                                                text-black cursor-pointer
-                                                hover:bg-white/50'
+                                    className='bg-white/20 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#c53102]
+                                                text-white cursor-pointer
+                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl'
                                     onClick={() => setProjectId(idx)}
                                 >
                                     {project.name}
@@ -105,7 +105,9 @@ const Projects = () => {
                                 </div>
                                 :
                                 // Content of the project
-                                <div className='flex flex-col justify-center p-6 w-full gap-10'>
+                                <div className='flex flex-col justify-center p-6 w-full 
+                                                gap-10 bg-white/10 mb-4 rounded-2xl
+                                                backdrop-blur-2xl shadow-2xl'>
                                     <div className='flex flex-col w-full justify-center items-center gap-10 p-1
                                                     lg:flex-row-reverse lg:p-2'>
                                         <img 
@@ -113,11 +115,11 @@ const Projects = () => {
                                             className='rounded-2xl w-[400px] h-[400px]
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
-                                        <p className='text-2xl md:text-3xl font-bold flex flex-col gap-2'>
+                                        <p className='text-2xl md:text-3xl font-bold flex flex-col gap-2 underline'>
                                                 {projects[projectId]?.name}
                                                 {projects[projectId]?.link && 
                                                     <a
-                                                        className='text-sm flex gap-1 items-center md:text-md text-blue-400'
+                                                        className='text-sm flex gap-1 items-center md:text-md text-[#dd1818]'
                                                         href={projects[projectId].link}
                                                         target='_blank'
                                                     >
@@ -134,6 +136,7 @@ const Projects = () => {
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odio, optio eum doloremque odit, deserunt reiciendis unde dolores cumque tempora beatae ipsum facere, quas et saepe voluptas nobis nostrum aut.   </p>
                                                 
                                     </div>
+                                    
                                     {/* //Members */}
                                     {projects[projectId].teamMembers && 
                                         <div className='flex flex-col justify-center items-center gap-4'>
@@ -144,7 +147,8 @@ const Projects = () => {
                                                     name={member.name}
                                                     role={member.role}
                                                     url={member.link}
-                                                    extraClass=' w-full bg-black/20 h-20 rounded-2xl p-1 flex items-center md:w-[70%] lg:w-[50%]'
+                                                    extraClass='w-full bg-black/50 backdrop-blur-2xl shadow-2xl text-sm md:text-md
+                                                                h-20 rounded-2xl p-1 flex items-center md:w-[70%] lg:w-[50%]'
                                                 />
                                             ))}
                                         </div>

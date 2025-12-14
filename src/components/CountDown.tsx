@@ -39,7 +39,7 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 
 				
 				<div className="flex flex-col justify-center items-center 
-								bg-black/30 p-4 rounded-2xl backdrop-blur-xs
+								bg-black/30 p-4 rounded-2xl backdrop-blur-xs border border-[#dd1818]
 								z-30"
 				>
 				
