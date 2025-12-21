@@ -12,7 +12,7 @@ const Home = () => {
                         md:flex-row pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"
         >
             <div 
-                className="w-full h-[40%] flex flex-col justify-center items-center gap-4
+                className="w-full h-[40%] flex flex-col justify-center max-md:items-center gap-4
                            md:w-[50%] md:h-full " 
             >
                 <a 
@@ -41,7 +41,7 @@ const Home = () => {
                 </p>
 
                 <p 
-                    className="text-sm rock-salt text-center
+                    className="text-sm rock-salt max-md:text-center
                                sm:text-base
                                md:text-xl
                                lg:text-2xl
