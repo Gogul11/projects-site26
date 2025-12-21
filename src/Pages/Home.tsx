@@ -1,10 +1,6 @@
-import { useNavigate } from "react-router";
 import Drone from "../components/Drone";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Home = () => {
-
-    const navigate = useNavigate()
 
     return (
         <div 
@@ -12,17 +8,17 @@ const Home = () => {
                         md:flex-row pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"
         >
             <div 
-                className="w-full h-[40%] flex flex-col justify-center max-md:items-center gap-4
+                className="w-full h-[40%] flex flex-col justify-center items-center max-md:items-center gap-4
                            md:w-[50%] md:h-full " 
             >
                 <a 
-                    className="text-[40px]
+                    className="text-[44px]
                                text-[#dd1818] 
-                               bruno-ace-sc-regular
-                               sm:text-[50px]
-                               md:text-[65px]
-                               lg:text-[70px]
-                               xl:text-[90px]" 
+                                bruno-ace-sc-regular
+                               sm:text-[54px]
+                               md:text-[69px]
+                               lg:text-[74px]
+                               xl:text-[94px]" 
                     href="https://cegtechforum.in/"
                     target="_blank"
                 >
@@ -41,19 +37,13 @@ const Home = () => {
                 </p>
 
                 <p 
-                    className="text-sm rock-salt max-md:text-center
+                    className="text-sm source_code_pro max-md:text-center
                                sm:text-base
                                md:text-xl
                                lg:text-2xl
                                xl:text-3xl"
                 >
-                    "Giving Life to ideas"
-                </p>
-                <p
-                    className="text-xl my-2 cursor-pointer flex gap-2 items-center text-[#4286f4] md:text-2xl"
-                    onClick={() => navigate("/technovation")}
-                >
-                    Technovation <FaExternalLinkAlt />
+                    "Giving Life to ideas !"
                 </p>
             </div>
 

@@ -32,7 +32,7 @@ const AboutUs = () => {
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
-                    className='rock-salt text-3xl max-[420px]:text-2xl max-xs'
+                    className='source_code_pro text-3xl max-[420px]:text-2xl max-xs'
                 >Meet our purpose</p>
                 {cards.map((card, idx) => (
                     <div

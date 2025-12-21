@@ -27,7 +27,7 @@ const GlassCard: React.FC<CardProps> = ({ title, content, image, onClose }) => {
 	    	<img src={image} alt={title} className="w-full h-64 object-cover rounded-t-3xl" />
 
 			<div className="p-6 flex flex-col">
-    	       <h2 className="text-3xl font-bold text-white my-1 rock-salt">{title}</h2>
+    	       <h2 className="text-3xl font-bold text-white my-1 source_code_pro">{title}</h2>
         	   <p className="text-white/90 mt-4 text-lg leading-relaxed">{content}</p>
          	</div>
 		</div>

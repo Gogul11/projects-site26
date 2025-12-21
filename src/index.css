@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss";
 
 body{
@@ -41,10 +42,8 @@ body{
   }
 }
 
-
-.rock-salt{
-    font-family: "Rock Salt", cursive;
-    font-weight: 400;
+.source_code_pro{
+   font-family: "Source Code Pro", monospace;
 }
 
 .bruno-ace-sc-regular {

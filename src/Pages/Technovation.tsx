@@ -26,10 +26,10 @@ const Technovation = () => {
             <div className='w-full flex flex-col 
                             justify-center items-center pt-10 '>
                     
-                <p className='text-xl font-bold rock-salt lg:text-3xl mb-10'>Registration Opens in</p>
+                <p className='text-xl font-bold source_code_pro lg:text-3xl mb-10'>Registration Opens in</p>
                 <Countdown targetDate="2026-02-10T18:00:00" />
 
-                <p className='text-md font-bold rock-salt lg:text-lg mt-4'>Get your ideas ready to light up!</p>
+                <p className='text-md font-bold source_code_pro lg:text-lg mt-4'>Get your ideas ready to light up!</p>
             </div>
 
             <div className='flex flex-col py-4 md:flex-row w-full md:justify-center gap-4 mt-4'>
@@ -44,7 +44,7 @@ const Technovation = () => {
                 </div>
 
                 <div className='flex flex-col items-center py-2 gap-4 md:w-[50%]'>
-                    <p className='text-2xl font-bold rock-salt lg:text-3xl underline'>Techonovation</p>
+                    <p className='text-2xl font-bold source_code_pro lg:text-3xl underline'>Techonovation</p>
                     <p
                         className='text-md md:text-lg lg:text-xl'
                     >
