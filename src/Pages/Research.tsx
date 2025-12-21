@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Year from '../components/Year';
 import {yearWiseProjects} from '../utils/projectsdata.ts'
 import { BiLinkExternal } from "react-icons/bi";
