@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 
 const DesktopViewNavbar = () => {
 
-    const items : Array<string> = ['Home', 'Projects', 'Research', 'Technovation', 'Achivements', 'About Us']
+    const items : Array<string> = ['Home', 'Projects', 'Research', 'Technovation', 'Achievements', 'About Us']
 
     const navigate = useNavigate()
     const location = useLocation()

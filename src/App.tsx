@@ -7,6 +7,7 @@ import AboutUs from "./Pages/AboutUs.tsx";
 import Technovation from "./Pages/Technovation.tsx";
 import Projects from "./Pages/Projects.tsx";
 import Research from "./Pages/Research.tsx";
+import Achievements from "./Pages/Achievements.tsx";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
 					<Route path="/technovation" element={<Technovation />} />
 					<Route path="/projects" element={<Projects />} />
 					<Route path="/research" element={<Research />} />
+					<Route path="/achievements" element={<Achievements />} />
 				</Routes>
 			</div>
 		</BrowserRouter>
