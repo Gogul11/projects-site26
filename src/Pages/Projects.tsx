@@ -111,7 +111,7 @@ const Projects = () => {
                                     <div className='flex flex-col w-full justify-center items-center gap-10 p-1
                                                     lg:flex-row-reverse lg:p-2'>
                                         <img 
-                                            src="/images/legacy.png" 
+                                            src={projects[projectId].imgUrl ? projects[projectId].imgUrl : '/images/ctf-logo.png'}
                                             className='rounded-2xl w-[400px] h-[400px]
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
@@ -123,7 +123,7 @@ const Projects = () => {
                                                         href={projects[projectId].link}
                                                         target='_blank'
                                                     >
-                                                                More Details <BiLinkExternal/>
+                                                        More Details <BiLinkExternal/>
                                                     </a>
                                                 }
                                         </p>
