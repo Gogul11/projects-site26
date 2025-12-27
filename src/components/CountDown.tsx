@@ -39,14 +39,14 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 
 				
 				<div className="flex flex-col justify-center items-center 
-								bg-black/30 p-4 rounded-2xl backdrop-blur-xs border border-[#dd1818]
+								bg-black/10 p-4 rounded-2xl backdrop-blur-xs border border-[#28282b]/10
 								z-30"
 				>
 				
 				{/* Numbers */}
 					<span 
 							className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider"
-							style={{ color: "#dd1818", textShadow: "0 0 15px #dd1818" }}
+							style={{ color: "#28282b", textShadow: "0 0 15px #28282b" }}
 					>
 						{time.d}:{time.h}:{time.m}:{time.s}
 					</span>

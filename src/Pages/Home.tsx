@@ -13,7 +13,7 @@ const Home = () => {
             >
                 <a 
                     className="text-[44px]
-                               text-[#dd1818] 
+                               text-[#28282b] 
                                 bruno-ace-sc-regular
                                sm:text-[54px]
                                md:text-[69px]

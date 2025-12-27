@@ -11,7 +11,7 @@ const Year:React.FC<yearProps> = (props) => {
             <IoMdArrowDropleftCircle 
                 onClick={() => props.setYear(prev => prev - 1)}
                 className="cursor-pointer"
-                color="#c53102"
+                color="#28282b"
                 size={40}
             />
 
@@ -20,7 +20,7 @@ const Year:React.FC<yearProps> = (props) => {
             <IoMdArrowDroprightCircle 
                 onClick={() => props.setYear(prev => prev + 1)}
                 className="cursor-pointer"
-                color="#c53102"
+                color="#28282b"
                 size={40}
             />
         </div>

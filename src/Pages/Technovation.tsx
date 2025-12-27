@@ -44,7 +44,7 @@ const Technovation = () => {
                 </div>
 
                 <div className='flex flex-col items-center py-2 gap-4 md:w-[50%]'>
-                    <p className='text-2xl font-bold source_code_pro lg:text-3xl underline'>Techonovation</p>
+                    <p className='text-[#28282b] text-2xl font-bold source_code_pro lg:text-3xl underline'>Techonovation</p>
                     <p
                         className='text-md md:text-lg lg:text-xl'
                     >
