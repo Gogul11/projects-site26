@@ -8,7 +8,7 @@ interface Project {
   description: string;
   link?: string;
   teamMembers?: Array<Person>;
-  imgUrl ?: string
+  imgUrl ?: string | null
 }
 
 interface YearProjects {
@@ -16,7 +16,13 @@ interface YearProjects {
   projects: Array<Project>;
 }
 
+interface YearResearch {
+  year : number,
+  researches : Array<Project>
+}
+
 export const yearWiseProjects: Array<YearProjects> = [
+  //20111
   {
     year: 2011,
     projects: [
@@ -57,6 +63,7 @@ export const yearWiseProjects: Array<YearProjects> = [
       },
     ],
   },
+  //2012
   {
     year: 2012,
     projects: [
@@ -122,6 +129,7 @@ export const yearWiseProjects: Array<YearProjects> = [
             }
     ]
   },
+  //2013
   {
     year: 2013,
     projects: [
@@ -175,6 +183,7 @@ export const yearWiseProjects: Array<YearProjects> = [
                 }
     ]
   },
+  //2014
   {
     year: 2014,
     projects:  [
@@ -204,6 +213,7 @@ export const yearWiseProjects: Array<YearProjects> = [
         }
     ]
   },
+  //2015
   {
     year : 2015,
     projects :  [
@@ -253,6 +263,7 @@ export const yearWiseProjects: Array<YearProjects> = [
         }
     ]
   },
+  //2016
   {
     year : 2016,
     projects : [
@@ -310,6 +321,7 @@ export const yearWiseProjects: Array<YearProjects> = [
         }
     ]
   },
+  //2017
   {
     year : 2017,
     projects : [
@@ -370,6 +382,7 @@ export const yearWiseProjects: Array<YearProjects> = [
             }
     ]
   },
+  //2018
   {
     year : 2018,
     projects : [
@@ -438,6 +451,7 @@ export const yearWiseProjects: Array<YearProjects> = [
         }
     ]
   },
+  //2019
   {
     year : 2019,
     projects :  [
@@ -513,8 +527,423 @@ export const yearWiseProjects: Array<YearProjects> = [
           description: "This project proposes an alternative method, LoRa wireless transmission, to the conventional public transport tracking systems, which use GPS.",
         }
       ]
+  },
+  //2020
+  {
+    year : 2020,
+    projects : [
+        {
+          name: "BOREWELL RESCUER",
+          description: "This project was developed with the aim of rescuing children who have fallen into bore wells in a safer and more efficient manner as compared to the conventional methods that are currently being used.",
+          imgUrl: "/projects/2020/BOREWELL_RESCUER.jpg"
+        },
+        {
+          name: "FACE ANGLE DETECTOR",
+          description: "To identify the angle that the neck makes with respect to the spine of the body. This helps us identify the angle of bending and thereby avoid neck sprains and muscle damage due to the long-term usage of mobile phones, laptops, and other gadgets that involve bending the neck at odd angles.",
+          imgUrl: null
+        },
+        {
+          name: "NAVIGATION SYSTEM FOR THE BLIND",
+          description: "This project was developed to help blind people navigate through congested areas without any assistance. This is done by giving vibratory feedback to their fingers based on the position and orientation of the obstacle with respect to the user.",
+          imgUrl: "/projects/2020/NAVIGATION_SYSTEM_FOR_THE_BLIND.jpeg"
+        },
+        {
+          name: "ROAD ACCIDENT ALERT AND RESCUER",
+          description: "To help persons injured during accidents by providing means for them to contact the closest hospital. The hospital is given relevant details about the location, contact details, and extent of the damage sustained by the victim due to the accident within a given time frame.",
+          imgUrl: null
+        },
+        {
+          name: "AUTOMATED PORTABLE FARM LAND",
+          description: "To make a portable farmland for urban homes that is completely automated and can be remotely farmed using IoT.",
+          imgUrl: "/projects/2020/AUTOMATED_PORTABLE_FARM_LAND.jpg"
+        },
+        {
+          name: "MOVABLE-TYPE COTTON PICKER",
+          description: "To design and fabricate a movable type of cotton picker. This will reduce the burden on manual laborers and will help in the efficient picking of cotton. Since more cotton can be picked per day, more profits can be made by the cotton farmer.",
+          imgUrl: "/projects/2020/MOVABLE_TYPE_COTTON_PICKER.jpg"
+        },
+        {
+          name: "WIRELESS ELECTRICITY",
+          description: "The main objective of this experiment is to demonstrate the process of wireless power using the concept of resonant energy transfer.",
+          imgUrl: null
+        },
+        {
+          name: "ZERO CARBON CHALLENGE",
+          description: "To convert the exhaust CO2 from automobiles into liquid CO2, which can be used for manufacturing of limestone, chalk, and marble. This project will enable us to lower CO2 levels in the atmosphere and thereby lower pollution levels in India.",
+          imgUrl: "/projects/2020/ZERO_CARBON_CHALLENGE.jpeg"
+        },
+        {
+          name: "SINGLE WHEEL SCOOTER (SWS)",
+          description: "To promote a vehicle in vehicle transportation, that is, it can be transported via other vehicles quite easily, to promote eco-friendly, energy-efficient personal transportation.",
+          imgUrl: "/projects/2020/SINGLE_WHEEL_SCOOTER.jpg"
+        },
+        {
+          name: "SMART 3R AND DISTRIBUTION SYSTEM",
+          description: "The aim of this project is to reduce, reuse, and recycle (3R) paper. A machine to do so was developed and placed in a public place. This machine returns paper products, such as notebooks, charts, etc., in exchange for the paper that was deposited in the machine.",
+          imgUrl: "/projects/2020/SMART_3R_AND_DISTRIBUTION_SYSTEM.jpeg"
+        }
+      ]
+  },
+  //2021
+  {
+    year : 2021,
+    projects : [
+      {
+        name: "XII(TH) MAN CRICKET BOWLING MACHINE",
+        description: "In the process of blending engineering into the sport, the 'XII(th) MAN' cricket bowling machine uses no electrical source and could perform all the features (different speeds up to 140 kmph, lengths, lines, off-spin, leg-spin) of a highly equipped electric bowler at a cost rate cut down considerably to 10–20% of it, targeting small-scale coaching institutes and colleges owing to our machine’s reliability and its cost.",
+        imgUrl: "/projects/2021/XII(TH)_MAN_CRICKET_BOWLING_MACHINE.png"
+      },
+      {
+        name: "MACHINE HOLE SCAVENGING BOT",
+        description: "The machine-hole scavenger bot is the answer to the problem faced by manual scavengers in the act of discrimination by society. The main objective of the bot is to eradicate manual scavenging and bring advancement to society. The bot contains a standing unit and a drone unit. The standing unit is for stabilizing the bot, and the drone unit is used to carry out the waste removal process inside the manhole. This bot works based on the parallel manipulator, which has six degrees of freedom (DOF). This is a cost-efficient bot in comparison to existing scavenging bots. The goal here is primarily to develop a machine-hole scavenger bot that could clean manholes by taking out solid wastes that block the liquid flow through the sewage system.",
+        imgUrl: "/projects/2021/MACHINE_HOLE_SCAVENGING_BOT.jpg"
+      },
+      {
+        name: "BOREWELL RESCUE BOT",
+        description: "India is facing a distressed, cruel situation wherein the previous years' several child deaths have been reported falling in the bore well. As the diameter of the bore well is quite narrow for any adult person and the lights go dark inside it, the rescue task in those situations is a challenging task. Here we are proposing a robotic system that will attach a harness to the child using pneumatic arms for picking up. The main aim of the project is to save the child who had accidentally fallen into the borewell hole. Our bot’s main objective is to save the child with minimal injuries.",
+        imgUrl: "/projects/2021/BOREWELL_RESCUE_BOT.jpg"
+      },
+      {
+        name: "INTELLIGENT LINE MARKING BOT",
+        description: "The intelligent line marking bot is an autonomous guided navigation bot that helps in marking field lines even on rough ground accurately with less time. It uses sensor fusion and advanced path planning algorithms to achieve the same. Robots are used in various fields for enormous applications. The issue we addressed is marking field lines manually on a sports field, especially on gravel or sand grounds, which may lead to errors and high time consumption. So we have designed an autonomous navigation line marking bot that can complete this process with ease. Our robot is aimed at providing accurate marking of any field within a shorter time frame using sensor fusion algorithms to fuse various sensors to accurately localize the robot. A path-planning algorithm is then used to navigate the robot to the end position.",
+        imgUrl: "/projects/2021/INTELLIGENT_LINE_MARKING_BOT.jpg"
+      },
+      {
+        name: "COVID QR APPLICATION",
+        description: "CEG’s COVID-19 trace-back application, COVID QR, can effectively trace COVID and identify possible COVID-19 patients to inhibit the spread of the disease. The application primarily relies on a simple QR code-to-location logging mechanism and a central user database for its operation. The key software components used in this application are a Java-based Android Studio outline, Firebase, and SQLite databases for data storage and query. The application is simple, lightweight, and user-friendly and does not require any location or Bluetooth access.",
+        imgUrl: "/projects/2021/COVID_QR_APPLICATION.jpg"
+      },
+      {
+        name: "INTELLIGENT BRAKING SYSTEM",
+        description: "In Intelligent Braking System, the digital input of the accelerometer is obtained. The load transfer is determined by kinematic considerations. All these calculations are manipulated digitally using an Arduino (UNO)-type board. The output of the Arduino is fed into a servo motor. The necessary torque is transmitted to a lead screw attached to the motor. As a result, the clevis position changes based on the input of the accelerometer. When the pedal is pressed manually, the load is applied to the sleeve, and based on the position of the balance bar, the load is split between the front and rear circuits. The end effect is observed by the piston travel in the front and rear master cylinders. This whole automated work keeps changing throughout the motion. Based on the dynamic load transfer at the various velocities of the vehicle, the braking force applied at the pedal is distributed accordingly to the front and rear master cylinders. The distribution of the braking force is achieved with the help of balance bars fixed at a certain position based on the safe limit of the braking force. The project deals with the adjustment of the balance bar position based on the input of the accelerometer and the manipulation of the Arduino board. This makes the entire braking system more effective and efficient.",
+        imgUrl: null
+      },
+      {
+        name: "E TRANSMISSION",
+        description: "One of the main problems faced by car drivers is engaging the clutch while starting to move the car, as frictional clutches are very difficult to operate and engage manually. Hence, in this project, a new kind of transmission system will be developed that has an electromagnetic clutch mechanism that has no use of gearings and is achieved by the principles of electromagnetism and electromagnetic induction. E-transmission is an advanced, non-contact type of electromagnetic transmission. This couples the engine to the gearbox electromagnetically, allows engine speed to vary independently of the vehicle's speed, and also reduces the number of gears required.",
+        imgUrl: "/projects/2021/E_TRANSMISSION.jpg"
+      },
+      {
+        name: "LICENSE PLATE RECOGNITION SYSTEM",
+        description: "License Plate Recognition is to detect vehicle number plates and recognize the number using OCR. This system maintains a database of the license numbers of the vehicles entering the campus. The main objective of the project is to identify vehicles by their license plate using machine learning. This can be done using a trained model to detect the license plates and applying OCR to get the license number. This vehicle number is then uploaded to the database.",
+        imgUrl: "/projects/2021/LICENSE_PLATE_RECOGNITION_SYSTEM.jpg"
+      },
+      {
+        name: "MESS MANAGEMENT SYSTEM",
+        description: "The mess management system aims at digitalizing the existing hostel mess system to reduce manpower and paper and to keep track of the students' mess entry and token system. This project is about mess management, which aims to reduce the manpower involved in maintaining the distribution of food to the students in our college mess. The distribution of non-vegetarian tokens to students has been done manually, and the mess employees have to ensure that no student gets the token twice. The paper egg tokens are used. These tokens are given as a bunch. Sometimes a student may not use all the tokens. The student has to scan the ID card to get non-veg. The system will verify, and the student can get the non-veg if the green light glows. The student has to scan an ID card once to get an egg. The fee will be added as per the number of times, ID card is scanned by the student. An easily maintainable application for the mess in charge that has checkboxes and a complaint register. Plastic token dispenser replaces paper tokens for vegetables (green token), non-vegetarian meals (red token), and eggs with an RFID reader.",
+        imgUrl: null
+      },
+      {
+        name: "BIKE SAFETY SYSTEM",
+        description: "Motorized accidents on many motorways are caused by a driver’s response to a sudden threat. Response timing plays a vital role when the vehicle goes at higher speeds. For instance, if the driver goes at 60 km/hr, the one-second delay in response time causes him to travel an additional 16 meters, excluding braking distance. Our objective is to reduce the reaction time. Supposedly, vehicle motion when braking occurs must comply with the physical principle of following the kinematics concepts of non-uniform motion slowing down between the driver and obstacles in front and the concept of non-uniform circular motion slowing down on the wheels of a motorized vehicle. For this reason, the Bike Safety System was created using the principles of non-uniform motion slowing down and non-uniform circular motion slowing down. The aim of this work is braking optimization with distance and speed variables obtained from the ultrasonic sensor and IR sensor mounted on a motorized vehicle. These components are controlled by the Arduino platform.",
+        imgUrl: "/projects/2021/BIKE_SAFETY_SYSTEM.jpg"
+      },
+      {
+        name: "GAS LEAKAGE DETECTION AND AUTO BOOKING",
+        description: "Our device is a multi-functional one that performs gas leakage safety operations using a pump, detects the gas level in the cylinder, and automatically books a new one. The sensor attached near the cylinder will detect and measure the intensity of the leakage. Based on that data, a pump that is attached outside of the kitchen starts to run and vary its RPM according to the intensity of the gas in the kitchen, exhausting the gas until the leakage intensity becomes negligible or below a dangerous level. The alerting systems (Buzzer and Auto Calling) can alert residents and nearby people. The load cell attached to a ring where the cylinder is placed measures the weight of the cylinder, and when it goes down beyond a certain value, our auto-booking system will be triggered and will book a new cylinder.",
+        imgUrl: "/projects/2021/GAS_LEAKAGE_DETECTION_AND_AUTO_BOOKING.jpg"
+      }
+    ]
+
+  },
+  //2022
+  {
+    year : 2022,
+    projects : [
+      {
+        name: "3D VIRTUAL MAP",
+        description: "An interactive application to show the beauty of CEG, the amazing architecture of the different buildings, the ambience created by the natural surroundings, and the variety of other amenities within the campus A user can get a virtual tour throughout the campus and could also get the shortest path from each location to every other location within the campus. The user can also walk manually through the map, exploring the different places at their own pace, with the use of a toggle. ",
+        imgUrl: null
+      },
+      {
+        name: "CEG APP",
+        description: "In the present, when information is shared through Instagram or WhatsApp about the happenings in college, not everyone gets access to the same information or maybe misses out on the forwarded messages in the groups. In order to tackle this situation and also to create an in-house social media platform, or rather, a forum, we have come up with the idea to create a web and mobile application where each CEGian will have his or her personal access and can visit or follow various clubs or departments in the application itself and stay up-to-date with the common functions in college and the department-specific activities as well. This app will also feature different pages of all the CEG clubs, and students can get access to them all on the same platform. Every page will have a forum where interactions between the student and the respective page admin can also take place.",
+        imgUrl: null
+      },
+      {
+        name: "E TRANSMISSION",
+        description: "One of the main problems faced by car drivers is disengaging the clutch while starting the car. The frictional clutches are very difficult to operate and engage manually. Hence, Our project is to develop a new transmission system that is achieved by the principles of electromagnetism and electromagnetic induction. This doesn’t need a synchromesh gearbox for transmission.",
+        imgUrl: "/projects/2022/E_TRANSMISSION.jpg"
+      },
+      {
+        name: "INTELLIGENT BRAKING SYSTEM",
+        description: "Based on the dynamic load transfer at the various velocities of the vehicle, the braking force applied at the pedal is distributed accordingly to the front and rear master cylinders. The distribution of the braking force is achieved with the help of balance bars fixed at a certain position based on the safe limit of the braking force. The project deals with the adjustment of the balance bar position based on the input of the accelerometer and the manipulation of the Arduino board. This makes the entire braking system more effective and efficient. Hence, it makes an intelligent braking system.",
+        imgUrl: null
+      },
+      {
+        name: "INTELLIGENT LINE MARKING BOT",
+        description: "iLMBt (intelligent Line Marking Bot) is an autonomous wheeled mobile robot that is modelled and designed to mark the lines of sports fields without any human intervention. A hopper mechanism is built in to control the flow of powder, which is controlled by a motorized lead screw. An effective dampening system is designed for the smooth operation of the robot. With the given coordinates, iLMBt calculates the desired path, and the required line is marked. A collision avoidance program is included with the path tracking algorithm to smoothly maneuver around obstacles while reaching the required starting point. iLMBt eliminates human labour in marking sports fields and also improves the accuracy of the lines.",
+        imgUrl: "/projects/2022/INTELLIGENT_LINE_MARKING_BOT.jpg"
+      },
+      {
+        name: "MACHINE HOLE SCAVENGER BOT",
+        description: "Manual scavenging, an inhumane activity, is still happening all over the world despite strict laws. In India, every year, hundreds of people die due to manual scavenging, and Tamil Nadu stands second in this cruelty. Many manual scavengers died due to the inhalation of poisonous gases from the manhole. Thus, our aim is to bring a machine for the necessary change. Under the Indian Government's Safai-Mitra Suraksha Challenge on November 20, 2020, we, the team ScavengeX, are in the process of converting the manholes to machine holes. This advanced semi-automatic robot has its own unique way of cleaning both the horizontal and vertical sewer lines of manholes without any human intervention, and this operation is made easier by using state-of-the art mechanisms with unique manipulation techniques designed for extreme situations, intelligent robot path planning and control algorithms, and first-in-segment implementation of image processing and machine learning techniques. We are working on achieving 90% localization of the product, thus lowering the cost and reaching poor parts of the country,thus acting as a savior for the lives of manual scavengers by upgrading them to the level of machine operators.",
+        imgUrl: "/projects/2022/MACHINE_HOLE_SCAVENGER_BOT.jpg"
+      },
+      {
+        name: "NOTIFY",
+        description: "Notify is a cloud-based app that enables users to manage the schedules of a group of people. It serves as a medium through which various information related to academics can be shared. We are trying to make this app available for a wide range of students, including university students, where many combinations of staff are possible, and other college and school students, where there will be a fixed set of staff for each class. ",
+        imgUrl: null
+      },
+      {
+        name: "PROTOWBOT",
+        description: "Many of the services these days have become self-operated. Be it self-checkout counters or booking tickets, you no longer need a middleman to handle these services, and facilities have been provided to do it on your own in your comfort. With that intent, we are designing a bot, ProTowBot, that focuses on towing vehicles that have broken down or been punctured. Instead of struggling in the middle of the road and hoping for the towing service to come to your rescue, you can take it into your own hands with this bot. Though the primary aim is to tow vehicles, this could also be applied to towing heavier goods in warehouses too. The compact design makes the bot portable. The RC controller makes it easy to handle the bot. The bot can also be controlled on your mobile phone through an app exclusively developed for the ProTowBot.",
+        imgUrl: null
+      },
+      {
+        name: "RAIN SENSING SHELTER",
+        description: "In this busy world, many working adults and students find it difficult to dry their clothes in the changing weather. Our project presents the design of an automatic, expandable, and retractable shelter that protects the cloth from highly humid and rainy environments. The above design was created in Solidworks. Our future action is to implement this idea in agricultural fields and truck covering systems.",
+        imgUrl: null
+      },
+      {
+        name: "VOICE CONTROLLED ROBOTIC VEHICLE",
+        description: "This project, Voice-Controlled Robotic Vehicle, helps to control robots through voice commands received via an Android application. The integration of the control unit with the Bluetooth device is done to capture and read voice commands. The robotic vehicle then operates as per the command received via the Android application. This microcontroller is integrated into the system, which makes it possible to operate the vehicle via an Android application. The controlling device may be any Android-based smartphone, tablet, etc. with an Android OS. The Android controlling system provides a good interactive GUI that makes it easy for the user to control the vehicle. The transmitter uses an Android application for transmitting the data. The receiver reads these commands and interprets them to control the robotic vehicle. The Android device sends commands to move the vehicle in forward, backward, right, and left directions. After receiving the commands, the microcontroller then operates the motors in order to move the vehicle in four directions. The communication between the Android device and receiver is sent as serial communication data. The microcontroller program is designed to move the motor through a motor driver IC as per the commands sent by the Android device.",
+        imgUrl: null
+      },
+      {
+        name: "WASTE SKIMMER BOT",
+        description: "In India, there are many water bodies that are not regularly cleaned or monitored. Due to this, waste gets accumulated in the long run, causing clogs and blockages of water flow in water channels. These channels of water provide drinking water in many regions but are presently not of any use due to contamination. We live in a society where people who dump waste are greater in number than those trying to remove it. So, the concentration of untreated waste is increasing dramatically, leading to severe consequences now as well as in the years to come. Currently, all water bodies are cleaned manually with manpower and heavy machinery, which is not economically feasible and causes severe health hazards working in such conditions for a prolonged time frame. Addressing the above issues, we propose our project idea, ‘Waste Skimmer Bot’, an automated bot that can skim or remove floating contaminants on the surface of still water bodies and pack them into reusable bags for easier disposal with minimal use of manpower and in a much more cost-efficient way. Our key idea is to reduce the area over which wastes are spread to a much smaller region, where they can then be easily retrieved later. Our goal is to clean our bodies of water, helping them return to their former glory.",
+        imgUrl: null
+      },
+      {
+        name: "XII MAN CRICKET BOWLING MACHINE",
+        description: "The XII(th)MAN is a cricket bowling machine that enables a batsman to practice (usually in the nets) and to hone specific skills through balls being bowled at the desired length, line, and speed. It can also be used when there is no one available to bowl, no one of the desired style or standard, or to reduce the workload of bowlers. In the process of blending engineering into sport, we came up with the project of a cricket bowling machine that uses no electrical source and could perform all the features (different speeds up to 140 kmph, lengths, lines, off spin, leg spin) of a highly equipped electric bowler at a cost rate cut down considerably to 10–20% of it, targeting small-scale coaching institutes and colleges owing to our machine’s reliability and its cost.",
+        imgUrl: "/projects/2022/XII_MAN_CRICKET_BOWLING_MACHINE.png"
+      }
+    ]
+
+  },
+  //2023
+  {
+    year : 2023,
+    projects : [
+      {
+        name: "AGRI SPRAYING DRONE",
+        description: "An unmanned aerial vehicle (UAV), commonly known as a drone, is an aircraft without any human pilot crew or passengers on board. UAVs are a component of an unmanned craft system, which includes adding a ground-based controller and a system of communications with the UAV. One such UAV includes the Multi-Action Drone. It is a multipurpose drone with distinct characteristics.",
+        imgUrl: null
+      },
+      {
+        name: "AMPHIBIOUS BOT",
+        description: "The Amphibious Bot is an advanced military surveillance project designed to operate seamlessly on land and water. The project utilizes advanced technologies, such as the Raspberry Pi platform, along with a range of sensors and custom-designed components, to enhance its surveillance capabilities. The custom-designed 3D-printed individual rocker arm suspension ensures stability and performance, while Flask enables a dynamic webpage displaying real-time sensor data, live video streaming, and intuitive controls for bot movement.",
+        imgUrl: null
+      },
+      {
+        name: "AU HITCH HANDLER",
+        description: "It is very common for students to face issues with the college management. To benefit both the student body and the college management, we have come up with a solution. AU Hitch Handler is a complaint app that collects data on issues that students face from the college administration. This app ensures that the complaint is resolved in every way possible. Machine learning algorithms and natural language processing (NLP) are used to automate the process in this project.",
+        imgUrl: null
+      },
+      {
+        name: "CEG E VEHICLE TRACKER",
+        description: "E-vehicles at Anna University are a mode of commutation for students inside the campus premises. They have a fixed schedule, but at times they tend to deviate from the schedule. Waiting for the E-vehicles without knowing when they will arrive will be a hassle. The tracker app project aims to address this issue. The tracker app allows for easy access to the e-vehicle. This app allows users to track the e-vehicle's location within the university campus every minute and provides a pickup intimation to the driver.",
+        imgUrl: null
+      },
+      {
+        name: "DIGIDOC",
+        description: "Adequate access to health care has always been a concern for both urban and rural residents. DigiDoc provides an efficient way to manage patient portfolios, including scans and diagnostic reports, prescriptions, medical histories, and all the details you need. DigiDoc is a centralized platform that allows you to conveniently schedule doctor appointments, find nearby available clinics, and share medical data with medical centers. Extensive use of machine learning can warn users of potential future health risks based on past medical records. DigiDoc can also find verified doctors specifically for your medical records.",
+        imgUrl: null
+      },
+      {
+        name: "ELECTRO SPEED TRACKER",
+        description: "Tired of the speed breakers? These setbacks will not bother you anymore. We have a solution for the same. The speed breaker power generator is our brand new project. It is based on generating electric energy with minimal inputs. In this system, power is produced by a rack and pinion mechanism. When a vehicle mounts on the speed breaker, the stress placed on the springs is converted into a rotating motion by the rack and pinion system. The input for energy production is the vehicle's weight. Unconventional energy sources will enable us to produce power at a lower cost.",
+        imgUrl: "/projects/2023/ELECTRO_SPEED_TRACKER.jpg"
+      },
+      {
+        name: "FARMENIENCE",
+        description: "The Farmenience project aims to connect farmers directly to markets, businesses, and non-governmental organizations (NGOS) without the use of a middleman. For additional benefits, this project will be built in two forms: an e-commerce web application and a mobile application. The Al assistance in this project guides farmers on how to use it wisely.",
+        imgUrl: "/projects/2023/FARMENIENCE.jpg"
+      },
+      {
+        name: "LAPTOP CASE X COOLER",
+        description: "Why is your laptop overheating? Your laptop is overheating because of insufficient cooling. Potential reasons include dust blocking the intake grills or exhaust ports, a clogged-up fan, or degenerating thermal paste or thermal pad. The project aims to provide a multifunctional laptop case with an embedded cooler. The Case X Cooler can be used to carry the laptop around and can be used as a stand as well as a cooling system. It has good storage space as well as a secure accessory and charger compartment.",
+        imgUrl: "/projects/2023/LAPTOP_CASE_X_COOLER.jpg"
+      },
+      {
+        name: "M2O",
+        description: "We all know the water cycle. What if this process could be carried out by a device that converts water vapor to usable water on the surface of the earth? M20 is a project aimed at exactly that. Atmospheric water generators (AWG) convert water vapor present in high-humidity areas into potable water. Humidity is a measure of the amount of water vapor present in the air. This ambitious project is helping combat water scarcity in such areas. Moisture is abundant in the air in areas of high humidity, and the AWG takes advantage of this to partially solve the problem of water scarcity. AWG filters are also designed to fit in a bottle, making them portable and space-saving in your home or community.",
+        imgUrl: null
+      },
+      {
+        name: "PILL DISPENSER",
+        description: "Medications can help with pain relief and relaxation, but they also come with a lot of responsibility. Taking the right medication at the right time is difficult enough, but it becomes even more difficult when multiple vials, missed doses, and tablet storage are considered. The Automatic Pill Dispenser Project seeks to address this issue. The automatic pill dispenser is integrated into a mobile app and provides 24-hour customer service to help you improve your health and medication management. It reminds patients to take the appropriate medication at the appropriate time and dose on a daily basis.",
+        imgUrl: null
+      },
+      {
+        name: "LUCIFER AI ARM",
+        description: "Thanos snaps his fingers to end the world. Isn't it cool to possess powers at your fingertips? Lucifer The Al Arm project is one of a kind. This project aims to create a robotic arm that can assist people with hand disabilities (disabilities above the elbow and shoulder). It works by recognizing and categorizing electromyography using signals from muscle machine-learning algorithms. This robotic hand will be propelled by servo and actuation motors.",
+        imgUrl: null
+      },
+      {
+        name: "REGEN",
+        description: "Moving a magnet around a coil of wire, or moving a coil of wire around a magnet, pushes the electrons in the wire and creates an electrical current. The Regen project aims to generate electricity based on the fundamental principles of electromagnetic induction and eddy current for converting kinetic energy into electrical energy. The electrical energy obtained is used to recharge batteries or other efficient energy storage devices.",
+        imgUrl: null
+      },
+      {
+        name: "ROBOT OF BLIND",
+        description: "The blind robot is a small, three-wheeled robot that will replace guide dogs for blind people. The bot will be attached to a leash, and given your destination, it will drag you there in the shortest path calculated. The bot will guide you to your destination using GPS and voice commands. An obstacle avoidance system is also included to ensure the person's safety.",
+        imgUrl: null
+      },
+      {
+        name: "WINCLEAN BOT",
+        description: "Even a small amount of dust is enough to trigger OCD. The WinClean bot is an autonomous robot used to clean windows. This has many advantages over traditional window cleaning methods. First and foremost, it is automatic or nearly automatic, so no user intervention is required. The second advantage is that it takes a fraction of the time to clean a window compared to a human doing the same job. Third, it has the ability to clean windows that are difficult for humans to access, such as skyscraper windows. The process is safe for the environment and users, as it cleans windows without the use of chemicals.",
+        imgUrl: null
+      }
+    ]
+
+  },
+  //2024
+  {
+    year : 2024,
+    projects : [
+        {
+          name: "SIGNAL SAFARI",
+          description: "Signal Safari seeks to assess signal strength from key cellular operators across the college campus.The project's focus is on creating a dynamic, automated mapping system that visually illustrates real- time network coverage.By providing insights into signal strength variations, this initiative aims to enhance the overall understanding of network performance for students and administrators on campus.",
+          imgUrl: null
+        },
+        {
+          name: "SEIGEI",
+          description: "Seigei's a project that serves to serve two historically disadvantaged communities - the deaf and the mute of India. The project leverages ML to allow for an Indian Sign Language (ISL) interpreter capable of interpreting pre- recorded videos and a video chat application taking advantage of real - time interpretation.",
+          imgUrl: null
+        },
+        {
+          name: "PREFABRICATED STRUCTURES",
+          description: "Research paper on modern construction technique, which involves pre-fabrication and 3D printing of concrete with BIM-integrated components, mainly focusing on joints and crack formation. This also covers the study of sustainability aspects.",
+          imgUrl: null
+        },
+        {
+          name: "TYPLOTIC EYE",
+          description: "The project Typlotic Eye aims to make Braille prints easily available to everyone by producing them on tabletop LaserJet printers. The existing toner powder on the LaserJet printers is replaced with a specialized polymer-based toner and is used to give an embossed effect to the Braille text.",
+          imgUrl: null
+        },
+        {
+          name: "PREDICTX",
+          description: "This project delves into the vital realm of predictive maintenance for industrial dies, addressing the need to enhance their reliability while minimizing downtime and costs. By leveraging data-driven methods such as machine learning, we aim to revolutionize maintenance practices. This project offers insights into the transformative potential of predictive maintenance, promising improved operational efficiency and equipment reliability in industrial contexts.",
+          imgUrl: null
+        },
+        {
+          name: "ROOFING",
+          description: "The choice of insulation material is crucial for reducing carbon emissions in construction. Natural materials like straws, wool, hemp, and coconut coir are ideal for tropical regions. The project aims to create eco-friendly roofs with rice straw, reducing health risks and promoting sustainability.",
+          imgUrl: null
+        },
+        {
+          name: "SOLENIXIC POWER PULSE",
+          description: "Introducing the prototype of a collaborative solenoid-IC engine. The goal of this engine is to combine the efficiency of an internal combustion engine with the eco- friendly advantages of an electric vehicle. This engine works by integrating the principle of electromagnetic induction with the transformer principle.",
+          imgUrl: null
+        },
+        {
+          name: "TACTICAL MILITARY DRONE",
+          description: "The project is about an advanced military surveillance drone featuring cutting- edge technology. This drone features include Anti-Reflection (AR) coating, Active Noise Cancellation (ANC) and Optical illusion system. The drone is remotely controlled through a secure wireless interface, ensuring precise and covert mission execution.",
+          imgUrl: null
+        },
+        {
+          name: "UDHIRA",
+          description: "This project focuses on creating organized communication through an application interface with medical units and blood banks to solve urgent blood requirements on behalf of the college. It also includes the verification and authentication of blood requirements. Students will receive real-time notifications about donation opportunities.",
+          imgUrl: null
+        },
+        {
+          name: "SELF BALANCING DELIVERY BOX",
+          description: "This innovative self-balancing box utilizes a gyro design to enhance balance, minimizing the risk of damage during transit. With integrated shock absorption materials, it ensures structural integrity and safeguards perishable goods from potential shifts in orientation. This provides a reliable solution for secure transportation of delicate materials.",
+          imgUrl: null
+        }
+      ]
+  },
+  //2025
+  {
+    year : 2025,
+    projects : [
+        {
+          name: "3D PRINTED CONCRETE 3DPC",
+          description: "This project aims to address the key limitations of 3D-printed concrete (3DPC) by developing solutions for challenges such as vertical reinforcement, high cement content, sustainability issues, cold joints, and fractures. By building a model of a 3D-printed element that overcomes these challenges, the project seeks to make 3DPC technology more feasible and widely acceptable in civil engineering. The objectives include accelerating infrastructure development, reducing construction time from months to days, minimizing costs, and cutting construction waste. The proposed methodology incorporates innovative approaches such as reinforcing with carbon fiber mesh for vertical strength, introducing coarse aggregate to reduce cement content and enhance sustainability, using supplementary cementitious materials (SCM) to decrease cement dependency, applying bonding agents to resolve cold joint issues, and incorporating macro fibers to prevent fractures and improve performance. This initiative aims to revolutionize 3DPC, making it a faster, more cost-effective, and sustainable construction solution.",
+          imgUrl: null
+        },
+        {
+          name: "AN ENGAGED CAMPUS NAVIGATION SYSTEM FOR ANNA UNIVERSITY AN AR EXPERIENCE",
+          description: "This project focuses on developing an Augmented Reality (AR) application for Anna University on the Android platform using ARCore SDK. The application will enhance campus navigation by allowing users to scan buildings using their smartphones and access real-time information such as department details, faculty profiles, building history, and upcoming events. The project also integrates 3D modeling using photogrammetry to create accurate virtual representations of the buildings.The AR application will significantly improve campus navigation and accessibility by enabling students, visitors, and faculty to interact with buildings in real-time. Additionally, the app streamlines building inspections and accreditation processes by providing instant access to detailed building information and maintenance records. This project leverages cutting-edge AR and 3D modeling technologies to provide a scalable, efficient, and engaging solution for both campus navigation and facility management.",
+          imgUrl: null
+        },
+        {
+          name: "LASER GALVANOMETER",
+          description: "This project focuses on developing a precise and efficient dimension-measuring device using a laser galvanometer, aimed at simplifying and accelerating measurement in manufacturing. The system uses two perpendicular mirrors in the x-axis and z-axis to deflect a laser based on supplied current, projecting a straight line that aligns with the object being measured. A microcontroller, pre-calibrated with measurement data, translates the current into accurate dimensions. This approach ensures high precision for both large and small components, offering a cost-effective and time-efficient alternative to traditional tools. Future advancements could enable measurements of complex shapes, further enhancing its versatility for quality control in manufacturing.",
+          imgUrl: null
+        },
+        {
+          name: "GREEN CONDITIONER",
+          description: "This project develops an innovative ohmic contact-based room cooler and heater to efficiently regulate room temperature using a compact ceiling-mounted heat exchange system. The system integrates heat-absorbing and emitting terminals made from advanced materials like semiconductors and thermal fillers. In summer, the terminals extract and dissipate heat, while in colder seasons, they reverse the flow to warm the room. A specialized air circulation system enhances heat exchange by directing room air to the terminals, ensuring consistent temperature regulation.The design is space-efficient, ideal for small rooms, and reduces installation complexity. By utilizing thermal conduction instead of compressors or refrigerants, the system is energy-efficient, cost-effective, and eco-friendly, significantly lowering power consumption and carbon emissions. This minimalistic, sustainable approach offers a smarter alternative to traditional HVAC systems.",
+          imgUrl: null
+        },
+        {
+          name: "HYBRID 3D PRINTER",
+          description: "The hybrid pneumatic-SLA 3D printer integrates pneumatic extrusion and UV laser-based stereolithography. It combines the ability to print high-viscosity materials like silicones and biopolymers using compressed air with the precision of UV light curing for liquid resin. This multi-process approach enables printing of complex geometries, multi-material structures, and composites. It offers a wider range of material compatibility, faster production, and improved versatility compared to conventional 3D printers, providing a solution for diverse industrial and biomedical applications.",
+          imgUrl: null
+        },
+        {
+          name: "HYDRAULIC POWERED CYCLE",
+          description: "This project seeks to transform a standard bicycle by replacing its traditional gear system with a hydraulic hybrid system. The high torque generated by the hydraulic pistons will enable the bicycle to move without the need for constant pedaling, reaching a certain speed before transitioning to a regenerative braking system. The braking system will recharge the actuator fluid, making the system energy-efficient. In cases where regenerative braking isn’t sufficient, the pedals will act as a manual pump, pressurizing the hydraulic fluid and recharging the actuator to continue operation. This design aims to offer a sustainable, low-maintenance, and efficient alternative to both traditional and electric bicycles",
+          imgUrl: null
+        },
+        {
+          name: "INTELLIGENT TRAFFIC SIGNAL SYSTEM FOR AMBULANCE PRIORITY USING GPS",
+          description: "This project focuses on developing an innovative Ambulance Monitoring App aimed at revolutionizing emergency response systems. The app leverages real-time GPS tracking and AI-driven optimal route suggestions to ensure ambulances reach their destinations swiftly. By integrating with traffic management systems, the app communicates with traffic signal control to clear pathways for ambulances, minimizing delays. Real-time traffic information and road conditions further enhance route efficiency. A unique feature is its collaboration with local authorities, enabling police to manage traffic signals manually while AI algorithms recommend changes based on ambulance location, speed, and traffic density. This dual approach ensures adaptability and precision. The app’s cost-effective design utilizes Google Maps API for real-time data, reducing expenses compared to proprietary systems.Ultimately, this app aims to save lives by reducing delays in emergency medical services through efficient coordination between emergency responders and traffic authorities, setting a new standard in emergency response technology.",
+          imgUrl: null
+        },
+        {
+          name: "OMEGAWATCH",
+          description: "This project aims to develop an AI-powered system to improve rescue operations during disasters by generating optimal escape and excavation routes from building plans, industrial layouts, and geospatial data. The AI processes inputs like 3D models (AutoCAD, Revit), 2D layouts, and geo-referenced TIFF files, converting them into navigable maps using image processing and file-to-map conversion tools. Pathfinding heuristics such as A* and Dijkstra’s algorithms dynamically generate escape routes, avoiding obstacles for faster rescuer access. CNNs enhance the AI’s ability to identify critical features like exits, walls, and potential victim locations in real time. The system integrates geospatial mapping tools like QGIS and ArcGIS to adapt navigation paths to varying disaster scenarios, including fires, floods, and earthquakes. Rescuers benefit from 2D and 3D visualizations of layouts with excavation paths, offering a preemptive plan for operations. Testing in simulators like Gazebo or Unity3D ensures real-world applicability and refinement.",
+          imgUrl: null
+        },
+        {
+          name: "SOLENIXIC PHASE 2",
+          description: "This prototype of a collaborative solenoid-IC engine combines the efficiency of internal combustion with the eco-friendly benefits of electric vehicles. Using electromagnetic induction and transformer principles, the engine integrates electric and fuel energy. A primary coil generates static magnetic flux, while a secondary coil reciprocates, converting electrical to mechanical energy. Fuel combustion reverses this process, inducing current to recharge the battery and enhance mileage. The solenoid mechanism boosts compression and combustion efficiency, delivering balanced torque. This sustainable innovation offers a lighter, more efficient hybrid solution, easing the transition from IC engines to electric vehicles while retaining E-vehicle advantages.",
+          imgUrl: null
+        },
+        {
+          name: "THE TYPLOTIC EYE",
+          description: "The project 'The Typlotic Eye'seeks to develop an affordable method for printing Braille text using a table top LaserJet printer. Instead of relying on the traditional mechanical embossing process which is expensive and time-consuming, this project works on using a specially formulated toner mixture which would enable the printer to create raisedBraille dots on regular paper by increasing the amount of toner deposited. By enhancing the toner’s adhesion to the photoconductor drum and optimizing the deposition process, the project aims to produce embossed prints on Maplitho paper, making Braille printing more accessible and cost effective. The goal is to make Braille printing more accessible and affordable by using a specially formulated toner mixture that can create embossed Braille dots, allowing for high-quality and durable Braille prints on Maplitho substrate with digital printing technology.",
+          imgUrl: null
+        }
+      ]
   }
 ];
+
+export const yearWiseResearch: Array<YearResearch> = [
+  //2025
+  {
+    year : 2025,
+    researches : [
+      {
+        name: "Artificial Time Machine (A.T.M)",
+        description: "This research explores leveraging Extended Reality (XR) for advancements in surveillance, communication, and device simulation. It focuses on three key areas. First, the 'Artificial Time Machine' integrates 360-degree video feeds from multiple cameras to monitor areas over time, allowing users to review past events in a 3D space. This system has applications in security, training, and education, enabling tasks such as revisiting lectures or analyzing activities, with data stored locally or on cloud-based platforms for easy access. Second, real-world communication in XR replaces avatars with live camera feeds to create more immersive and lifelike interactions. For instance, one individual’s activities can be streamed to another via VR headsets, simulating face-to-face communication in real-time. Lastly, the research emphasizes device simulation in VR, using Unity and MATLAB to model systems like Arduino and motors for performance analysis. This allows accurate testing and evaluation of devices in virtual environments before real-world implementation. By combining these innovations, XR is positioned to significantly enhance security, education, communication, and engineering applications.",
+        imgUrl: null
+      },
+      {
+        name: "Carbon Guage",
+        description: "This project aims to develop a web-based platform that shows the amount of carbon emitted in a core industry. This project will use the formulas such as Energy Consumption, Carbon Emissions, Embodied Carbon of Waste and it also used with the cutting fluid consumption, cutting tool data, and material processed. This will lead to give the amount of carbon emitted in a core machines. This data will also be displayed with charts to show which process emits more amount of carbon. This will help to give an idea of how much carbon is being emitted by a single or many machines with a period of time. This website will also give a limitation of the govt of that country and will give whether this much amount of carbon emission within the limit or not. This will give an overview of how much carbon is being emitted by these machines.",
+        imgUrl: null
+      },
+      {
+        name: "Electric Propulsion System",
+        description: "This research aims to enhance Hall effect thrusters for electric propulsion, focusing on increasing thrust efficiency, supporting India's ISRO initiative, and advancing space missions with reduced costs and propellant consumption",
+        imgUrl: null
+      },
+      {
+        name: "Glacier Motion",
+        description: "This study proposes an integrated approach to monitoring glacial motion using DInSAR, SBAS-InSAR, and Persistent Scatterer (PS) techniques. While traditional methods are time-consuming, these InSAR techniques provide efficient and accurate alternatives. DInSAR measures surface deformation but is affected by atmospheric and topographic noise, which SBAS-InSAR mitigates by forming small-baseline interferograms. PS techniques further enhance precision by identifying stable points for long-term monitoring. By combining these methods, the approach improves accuracy, spatial coverage, and temporal resolution, enabling detailed detection of glacial motion. This integrated methodology offers a robust tool for studying glacier dynamics and their role in climate change.",
+        imgUrl: null
+      },
+      {
+        name: "GROUNDWATER QUALITY MAPPING USING MULTIFACTOR ANALYSIS",
+        description: "This research maps groundwater quality in Tirunelveli using multifactor analysis to assess the impact of geology, aquifers, land use, and industrial activities. By integrating data from remote sensing sources (Landsat, Hyperion, Sentinel), groundwater levels (WRIS), and soil nutrients (GEE), it identifies potable water hotspots, areas of declining quality, and regions suited for agriculture. Using GIS and geospatial techniques, the study also creates a cropping suitability map to aid agricultural planning. The findings provide a sustainable framework for managing groundwater, addressing issues like saline intrusion and industrial contamination, and supporting rural and urban water needs.",
+        imgUrl: null
+      },
+      {
+        name: "PRECISION AGRICULTURE ACCURACY ASSESSMENT USING OPEN-SOURCE SATELLITE IMAGERY",
+        description: "This study evaluates the accuracy of open-source satellite imagery compared to ground-based data from sensors, drones, and UAVs for precision agriculture. Using multispectral, hyperspectral, and microwave remote sensing, it analyzes soil moisture, vegetation indices, and crop growth stages in a degraded agricultural area. By integrating diverse data sources, the research identifies crop failure nodes, models contributing factors with multivariate regression, and validates results through comparative analysis. The findings aim to enhance predictive agricultural modeling and support interventions to boost resilience in vulnerable regions.",
+        imgUrl: null
+      }
+    ]
+
+  }
+]
+
 
 
 //  link : "https://gogul11.github.io/portfolio",

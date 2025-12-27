@@ -3,6 +3,7 @@ import Contact from '../components/Contact';
 import { IoMdMail } from "react-icons/io";
 import GlassCard from '../components/GlassCard';
 import { FaCaretSquareRight } from "react-icons/fa";
+import { contactData } from '../utils/contactData';
 
 const AboutUs = () => {
 
@@ -56,10 +57,15 @@ const AboutUs = () => {
                     <IoMdMail size={20} color='yellow' /> 
                     <p>projects@cegtechforum.in</p> 
                 </a> 
-                <Contact name='Gogul' number='9943638746' url='https://google.com'/> 
-                <Contact name='Gogul' number='9943638746' url='h.com'/> 
-                <Contact name='Gogul' number='9943638746' url='h.com'/> 
-                <Contact name='Gogul' number='9943638746' url='h.com'/> 
+                {contactData.map((c, idx) => (
+                    <Contact 
+                        key={idx}
+                        name={c.name} 
+                        number={c.number} 
+                        url={c.url}
+                    /> 
+                ))}
+                
             </div> 
 
             {activeCard !== null && (

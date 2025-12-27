@@ -73,7 +73,7 @@ const Projects = () => {
                     </div>
                 :
                     <div className='flex flex-col md:flex-row md:justify-evenly'>
-                        <div className='flex max-md:overflow-x-scroll gap-4 min p-1 w-full 
+                        <div className='flex max-md:overflow-x-scroll gap-4 min p-1 w-full
                                         md:flex-col md:w-[200px] md:overflow-y-auto md:h-[700px] my-10 md:p-2'
                         >
                             {projects.map((project, idx) => (
@@ -81,7 +81,7 @@ const Projects = () => {
                                     key={idx}
                                     className='bg-white/20 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#c53102]
                                                 text-white cursor-pointer
-                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl'
+                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip '
                                     onClick={() => setProjectId(idx)}
                                 >
                                     {project.name}
@@ -130,11 +130,7 @@ const Projects = () => {
                                     </div>
                                     <hr className="-my-8 border-0 h-px bg-white/40 backdrop-blur-md" />
                                     <div className='lg:p-6 md:p-4'>
-                                        <p className='text-lg'>{projects[projectId]?.description}</p>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odio, optio eum doloremque odit, deserunt reiciendis unde dolores cumque tempora beatae ipsum facere, quas et saepe voluptas nobis nostrum aut.   </p>
-                                        <p className='text-lg'>{projects[projectId]?.description}</p>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odio, optio eum doloremque odit, deserunt reiciendis unde dolores cumque tempora beatae ipsum facere, quas et saepe voluptas nobis nostrum aut.   </p>
-                                                
+                                        <p className='text-lg'>{projects[projectId]?.description}</p>                                                
                                     </div>
                                     
                                     {/* //Members */}

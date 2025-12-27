@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Year from '../components/Year';
-import {yearWiseProjects} from '../utils/projectsdata.ts'
+import {yearWiseResearch} from '../utils/projectsdata.ts'
 import { BiLinkExternal } from "react-icons/bi";
 import Contact from '../components/Contact.tsx';
 
@@ -8,7 +8,7 @@ const Projects = () => {
 
     const [year, setYear] = useState<number>(2025)
 
-    const researches = yearWiseProjects.find((y) => y.year === year)?.projects || []
+    const researches = yearWiseResearch.find((y) => y.year === year)?.researches || []
 
     const [researchId, setResearchId] = useState<number>(-1)
 
@@ -81,7 +81,7 @@ const Projects = () => {
                                     key={idx}
                                     className='bg-white/20 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#c53102]
                                                 text-white cursor-pointer
-                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl'
+                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip'
                                     onClick={() => setResearchId(idx)}
                                 >
                                     {project.name}
@@ -111,7 +111,7 @@ const Projects = () => {
                                     <div className='flex flex-col w-full justify-center items-center gap-10 p-1
                                                     lg:flex-row-reverse lg:p-2'>
                                         <img 
-                                            src="/images/legacy.png" 
+                                            src={researches[researchId].imgUrl ? researches[researchId].imgUrl : '/images/ctf-logo.png'}
                                             className='rounded-2xl w-[400px] h-[400px]
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
@@ -130,11 +130,7 @@ const Projects = () => {
                                     </div>
                                     <hr className="-my-8 border-0 h-px bg-white/40 backdrop-blur-md" />
                                     <div className='lg:p-6 md:p-4'>
-                                        <p className='text-lg'>{researches[researchId]?.description}</p>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odio, optio eum doloremque odit, deserunt reiciendis unde dolores cumque tempora beatae ipsum facere, quas et saepe voluptas nobis nostrum aut.   </p>
-                                        <p className='text-lg'>{researches[researchId]?.description}</p>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias odio, optio eum doloremque odit, deserunt reiciendis unde dolores cumque tempora beatae ipsum facere, quas et saepe voluptas nobis nostrum aut.   </p>
-                                                
+                                        <p className='text-lg'>{researches[researchId]?.description}</p>                                                
                                     </div>
                                     {/* //Members */}
                                     {researches[researchId].teamMembers && 
