@@ -79,7 +79,7 @@ const Projects = () => {
                             {researches.map((project, idx) => (
                                 <div
                                     key={idx}
-                                    className='bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#28282b]/10
+                                    className='bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#1b1212]/10
                                                 text-white cursor-pointer
                                                 hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip'
                                     onClick={() => setResearchId(idx)}
@@ -115,7 +115,7 @@ const Projects = () => {
                                             className='rounded-2xl w-[400px] h-[400px]
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
-                                        <p className='text-[#28282b] text-2xl md:text-3xl font-bold flex flex-col gap-2 underline'>
+                                        <p className='text-[#1b1212] text-2xl md:text-3xl font-bold flex flex-col gap-2 underline'>
                                                 {researches[researchId]?.name}
                                                 {researches[researchId]?.link && 
                                                     <a

@@ -56,7 +56,7 @@ const MobileViewNavbar = () => {
                             key={idx}
                             to={item === 'Home' ? '/' : item.toLowerCase().replace(' ', '-')}
                             className={location.pathname === getPath(item.toLowerCase()) ? 
-                                        'text-[#28282b] underline font-extrabold' : 'text-white'}
+                                        'text-[#1b1212] underline font-extrabold' : 'text-white'}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >{item}</Link>
                     ))}

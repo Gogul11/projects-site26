@@ -29,7 +29,7 @@ const Contact: React.FC<ContactProps> = (props) => {
 
                 {props.url && 
                     <a href={props.url} target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin size={26} color="#28282b" />
+                        <FaLinkedin size={26} color="#1b1212" />
                     </a>
                 }
 
