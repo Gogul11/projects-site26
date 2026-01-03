@@ -33,12 +33,12 @@ const AboutUs = () => {
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
-                    className='source_code_pro text-3xl max-[420px]:text-2xl max-xs'
+                    className='source_code_pro text-3xl max-[420px]:text-2xl max-xs text-[#1b1212] font-semibold'
                 >Meet our purpose</p>
                 {cards.map((card, idx) => (
                     <div
                         key={idx}
-                        className="px-6 py-3 bg-white/10 rounded-lg
+                        className="px-6 py-3 bg-white/10 rounded-lg border border-[#1b1212]/10
                                     backdrop-blur-sm cursor-pointer
                                     flex items-center gap-5 max-w-[350px] w-[300px] max-[350px]:w-fit"
                         onClick={() => setActiveCard(idx)}
@@ -51,7 +51,7 @@ const AboutUs = () => {
             
             <div className='h-[50%] w-full flex flex-col justify-center items-center gap-4 md:h-full md:w-[50%] mb-4'> 
                 <a 
-                    className='flex justify-center items-center w-fit gap-1 bg-white/10 border border-[#c53102] rounded-lg px-2 py-1' 
+                    className='flex justify-center items-center w-fit gap-1 bg-black/10 border border-[#1b1212]/10 rounded-lg px-2 py-1' 
                     href='mailto:projecct@cegtechforum.in' 
                 > 
                     <IoMdMail size={20} color='yellow' /> 

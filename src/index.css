@@ -6,40 +6,14 @@
 
 body{
     font-family: "JetBrains Mono", monospace;
-    /* background: #373B44; 
-    background: -webkit-linear-gradient(to left, #4286f4, #373B44);  
-    background: linear-gradient(to left, #4286f4, #373B44);  */
-    /* background: #333333;
-    background: -webkit-linear-gradient(to left, #dd1818, #333333); 
-    background: linear-gradient(to left, #dd1818, #333333);  */
-    background: #000;
+    background: #3e4043; 
+    background: -webkit-linear-gradient(to left, #4286f4, #3e4043);  
+    background: linear-gradient(to left, #4286f4, #3e4043); 
     color: white;
     padding: 0;
     margin: 0;
     min-height: 100vh;
     font-size: 16px;
-}
-
-@media (min-width: 681px) {
-  body {
-    background: radial-gradient(
-      130% 100% at center bottom,
-      #962401 7%,   
-      #c53102 25%,
-      #000 50%
-    );
-  }
-}
-
-@media (max-width: 680px) {
-  body {
-    background: radial-gradient(
-      100% 140% at left center,
-      #962401 5%,
-      #c53102 20%,
-      #000 45%
-    );
-  }
 }
 
 .source_code_pro{

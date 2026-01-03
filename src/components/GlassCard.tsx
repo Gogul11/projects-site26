@@ -12,22 +12,22 @@ const GlassCard: React.FC<CardProps> = ({ title, content, image, onClose }) => {
 
   return (
     <div 
-		className="bg-black/20 fixed inset-0 z-50 p-4 overflow-y-auto backdrop-blur-2xl flex sm:justify-center sm:items-center "
+		className="bg-black/5 fixed inset-0 z-50 p-4 overflow-y-auto backdrop-blur-md flex sm:justify-center sm:items-center "
 		onClick={onClose}
 	>
        	
-		<button className="absolute top-8 right-8 text-white hover:text-red-400 z-10 cursor-pointer" onClick={onClose}>
+		<button className="absolute top-8 right-8 text-white hover:text-[#1b1212]/50 z-10 cursor-pointer" onClick={onClose}>
          	<FaGear size={24} />
         </button>
 
 		<div 
-			className="bg-black/50 h-fit rounded-3xl md:w-[50%] lg:w-[40%]"
+			className="bg-white/10 h-fit rounded-3xl md:w-[50%] lg:w-[40%] border border-[#1b1212]/10"
 			onClick={(e) => e.stopPropagation()}
 		>
 	    	<img src={image} alt={title} className="w-full h-64 object-cover rounded-t-3xl" />
 
 			<div className="p-6 flex flex-col">
-    	       <h2 className="text-3xl font-bold text-white my-1 source_code_pro">{title}</h2>
+    	       <h2 className="text-3xl font-bold text-[#1b1212] my-1 source_code_pro">{title}</h2>
         	   <p className="text-white/90 mt-4 text-lg leading-relaxed">{content}</p>
          	</div>
 		</div>

@@ -39,21 +39,21 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 
 				
 				<div className="flex flex-col justify-center items-center 
-								bg-black/30 p-4 rounded-2xl backdrop-blur-xs border border-[#dd1818]
+								bg-black/10 p-4 rounded-2xl backdrop-blur-xs border border-white/10
 								z-30"
 				>
 				
 				{/* Numbers */}
 					<span 
 							className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider"
-							style={{ color: "#dd1818", textShadow: "0 0 15px #dd1818" }}
+							style={{ color: "#fff", textShadow: "0 0 10px #fff" }}
 					>
 						{time.d}:{time.h}:{time.m}:{time.s}
 					</span>
 
 					{/* Labels */}
 					<span className="w-full text-center text-xs sm:text-sm md:text-lg lg:text-xl uppercase tracking-wide mt-1"
-							style={{ color: "#fff" }}>
+							style={{ color: "#1b1212" }}>
 						Days : Hours : Minutes : Seconds
 					</span>
 

@@ -4,9 +4,19 @@ import Countdown from '../components/CountDown';
 const Technovation = () => {
     const images = [
         '/technovation-images/1.png',
-        '/technovation-images/2.png',
-        '/technovation-images/3.png',
-        '/technovation-images/4.png',
+        '/technovation-images/2.jpg',
+        '/technovation-images/3.jpg',
+        '/technovation-images/4.jpg',
+        '/technovation-images/5.jpg',
+        '/technovation-images/6.jpg',
+        '/technovation-images/7.jpg',
+        '/technovation-images/8.jpg',
+        '/technovation-images/9.jpg',
+        '/technovation-images/10.jpg',
+        '/technovation-images/11.jpg',
+        '/technovation-images/12.jpg',
+        '/technovation-images/13.jpg',
+        '/technovation-images/14.jpg',
     ]
 
     const [currentImage, setCurrentImage] = useState<number>(0)
@@ -44,7 +54,7 @@ const Technovation = () => {
                 </div>
 
                 <div className='flex flex-col items-center py-2 gap-4 md:w-[50%]'>
-                    <p className='text-2xl font-bold source_code_pro lg:text-3xl underline'>Techonovation</p>
+                    <p className='text-[#1b1212] text-2xl font-bold source_code_pro lg:text-3xl underline'>Techonovation</p>
                     <p
                         className='text-md md:text-lg lg:text-xl'
                     >
