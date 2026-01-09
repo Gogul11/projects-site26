@@ -24,7 +24,7 @@ const AchievementDetailCard : React.FC<props> = (props) => {
                         className='rounded-2xl w-[400px] h-[400px]
                                     md:w-[500px] md:h-[300px] lg:h-[500px] lg:w-[600px]' 
                         alt="" />
-                    <p className='text-2xl md:text-3xl font-bold underline text-[#1b1212]'>
+                    <p className='text-2xl md:text-3xl font-bold underline text-[#1b1212] day-one'>
                             {props.name}
                     </p>
                 </div>

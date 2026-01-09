@@ -30,7 +30,7 @@ const Projects = () => {
             year < 2011 
                 ? 
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl source_code_pro'>CTF Projects weren't unlocked in this timeline.</p>
+                        <p className='text-2xl day-one'>CTF Projects weren't unlocked in this timeline.</p>
 
                         <img
                             src="/images/gear.png"
@@ -45,7 +45,7 @@ const Projects = () => {
             year > new Date().getFullYear() 
                 ?
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl source_code_pro'>Loading… something cool is on its way</p>
+                        <p className='text-2xl day-one'>Loading… something cool is on its way</p>
 
                         <img
                             src="/images/gear.png"
@@ -60,7 +60,7 @@ const Projects = () => {
             projects.length === 0 
                 ?
                     <div className='w-full flex flex-col gap-10 justify-center items-center h-full my-10'>
-                        <p className='text-2xl source_code_pro'>This year's projects are coming soon</p>
+                        <p className='text-2xl day-one'>This year's projects are coming soon</p>
                         
                         <img
                             src="/images/gear.png"
@@ -92,7 +92,7 @@ const Projects = () => {
                         <div className='w-full md:w-[80%]'>
                             {projectId === -1 ? 
                                 <div className='flex flex-col gap-10 justify-center items-center my-10'>
-                                    <p className='text-2xl source_code_pro '>Choose a project to decode its details</p>
+                                    <p className='text-2xl day-one '>Choose a project to decode its details</p>
 
                                     <img
                                         src="/images/gear.png"
@@ -116,7 +116,7 @@ const Projects = () => {
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
                                         <p className='text-[#1b1212] text-2xl md:text-3xl font-bold flex flex-col gap-2 underline'>
-                                                {projects[projectId]?.name}
+                                                <span className='day-one'>{projects[projectId]?.name}</span>
                                                 {projects[projectId]?.link && 
                                                     <a
                                                         className='text-sm flex gap-1 items-center md:text-md text-[#dd1818]'

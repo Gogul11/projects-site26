@@ -14,7 +14,7 @@ const Home = () => {
                 <a 
                     className="text-[44px]
                                text-[#1b1212] 
-                                bruno-ace-sc-regular
+                               day-one
                                sm:text-[54px]
                                md:text-[69px]
                                lg:text-[74px]
@@ -26,7 +26,7 @@ const Home = () => {
                 </a>
 
                 <p 
-                    className="bruno-ace-sc-regular 
+                    className="day-one
                                text-[40px]
                                min-[350px]:text-[50px]
                                sm:text-[65px]
@@ -37,7 +37,7 @@ const Home = () => {
                 </p>
 
                 <p 
-                    className="text-sm source_code_pro max-md:text-center
+                    className="text-sm max-md:text-center day-one
                                sm:text-base
                                md:text-xl
                                lg:text-2xl

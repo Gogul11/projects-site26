@@ -33,7 +33,7 @@ const AboutUs = () => {
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
-                    className='source_code_pro text-3xl max-[420px]:text-2xl max-xs text-[#1b1212] font-semibold'
+                    className='day-one text-3xl max-[420px]:text-2xl max-xs text-[#1b1212] font-semibold'
                 >Meet our purpose</p>
                 {cards.map((card, idx) => (
                     <div

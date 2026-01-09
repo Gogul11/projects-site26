@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import "tailwindcss";
 
+
 body{
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Roboto Mono", monospace;
     background: #3e4043; 
     background: -webkit-linear-gradient(to left, #4286f4, #3e4043);  
     background: linear-gradient(to left, #4286f4, #3e4043); 
@@ -16,14 +15,8 @@ body{
     font-size: 16px;
 }
 
-.source_code_pro{
-   font-family: "Source Code Pro", monospace;
-}
-
-.bruno-ace-sc-regular {
-  font-family: "Bruno Ace SC", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.day-one{
+    font-family: "Days One", sans-serif;
 }
 
 @keyframes slideBar {
