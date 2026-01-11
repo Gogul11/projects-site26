@@ -3,6 +3,7 @@ import Year from '../components/Year';
 import {yearWiseResearch} from '../utils/projectsdata.ts'
 import { BiLinkExternal } from "react-icons/bi";
 import Contact from '../components/Contact.tsx';
+import Loader from '../components/Loader.tsx'
 
 const Projects = () => {
 
@@ -17,10 +18,28 @@ const Projects = () => {
         return () => clearTimeout(timer);
     }, [year]);
 
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
+
 
     return (
         <div
-            className='pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            className='pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 ani'
         >
             <div className='h-14 w-full my-8'>
                 <Year year={year} setYear={setYear}/>
@@ -30,7 +49,7 @@ const Projects = () => {
             year < 2025 
                 ? 
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl source_code_pro'>CTF Research weren't unlocked in this timeline.</p>
+                        <p className='text-2xl day-one text-center'>CTF Research weren't unlocked in this timeline.</p>
 
                         <img
                             src="/images/gear.png"
@@ -45,7 +64,7 @@ const Projects = () => {
             year > new Date().getFullYear() 
                 ?
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl source_code_pro'>Loading… something cool is on its way</p>
+                        <p className='text-2xl day-one text-center'>Loading… something cool is on its way</p>
 
                         <img
                             src="/images/gear.png"
@@ -60,7 +79,7 @@ const Projects = () => {
             researches.length === 0 
                 ?
                     <div className='w-full flex flex-col gap-10 justify-center items-center h-full my-10'>
-                        <p className='text-2xl source_code_pro'>This year's researches are coming soon</p>
+                        <p className='text-2xl day-one text-center'>This year's researches are coming soon</p>
                         
                         <img
                             src="/images/gear.png"
@@ -79,9 +98,10 @@ const Projects = () => {
                             {researches.map((project, idx) => (
                                 <div
                                     key={idx}
-                                    className='bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#1b1212]/10
-                                                text-white cursor-pointer
-                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip'
+                                    className={`bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#1b1212]/10 cursor-pointer
+                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip
+                                                ${idx === researchId ? 'text-black font-semibold' : 'text-white'} 
+                                                `}
                                     onClick={() => setResearchId(idx)}
                                 >
                                     {project.name}
@@ -92,7 +112,7 @@ const Projects = () => {
                         <div className='w-full md:w-[80%]'>
                             {researchId === -1 ? 
                                 <div className='flex flex-col gap-10 justify-center items-center my-10'>
-                                    <p className='text-2xl source_code_pro text-center'>Choose a research to decode its details</p>
+                                    <p className='text-2xl day-one text-center'>Choose a research to decode its details</p>
 
                                     <img
                                         src="/images/gear.png"
@@ -116,7 +136,7 @@ const Projects = () => {
                                                         md:w-[500px] md:h-[300px]' 
                                             alt="" />
                                         <p className='text-[#1b1212] text-2xl md:text-3xl font-bold flex flex-col gap-2 underline'>
-                                                {researches[researchId]?.name}
+                                                <span className='day-one'>{researches[researchId]?.name}</span>
                                                 {researches[researchId]?.link && 
                                                     <a
                                                         className='text-sm flex gap-1 items-center md:text-md text-[#dd1818]'

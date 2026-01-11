@@ -1,10 +1,30 @@
+import { useEffect, useState } from "react";
 import Drone from "../components/Drone";
+import Loader from "../components/Loader";
 
 const Home = () => {
 
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
+
     return (
         <div 
-            className="h-screen w-full flex flex-col 
+            className="h-screen w-full flex flex-col ani
                         md:flex-row pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"
         >
             <div 
@@ -13,8 +33,11 @@ const Home = () => {
             >
                 <a 
                     className="text-[44px]
-                               text-[#1b1212] 
-                                bruno-ace-sc-regular
+                    bg-clip-text
+                               text-transparent
+                               font-bold
+                               gradient
+                               day-one
                                sm:text-[54px]
                                md:text-[69px]
                                lg:text-[74px]
@@ -26,7 +49,7 @@ const Home = () => {
                 </a>
 
                 <p 
-                    className="bruno-ace-sc-regular 
+                    className="day-one
                                text-[40px]
                                min-[350px]:text-[50px]
                                sm:text-[65px]
@@ -37,7 +60,7 @@ const Home = () => {
                 </p>
 
                 <p 
-                    className="text-sm source_code_pro max-md:text-center
+                    className="text-sm max-md:text-center day-one
                                sm:text-base
                                md:text-xl
                                lg:text-2xl

@@ -1,39 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Contact from '../components/Contact';
 import { IoMdMail } from "react-icons/io";
 import GlassCard from '../components/GlassCard';
 import { FaCaretSquareRight } from "react-icons/fa";
 import { contactData } from '../utils/contactData';
+import Loader from '../components/Loader';
+import { cards } from '../utils/aboutUsData';
 
 const AboutUs = () => {
 
-    const cards = [
-        {
-            title: "Vision",
-            content: "Giving life to ideas, acting as catalysts to enable students to turn their ideas into reality, and pushing these ideas forward to make them successful entrepreneurs.",
-            image: "/images/vision.png"
-        },
-        {
-            title: "Mission",
-            content: "Here at CTF PROJECTS, our mission is all about bringing ideas to life in a cool and tech-savvy way. We're like the dream team for innovation! We want to create an awesome space where ideas not only survive but also thrive. We're not just brainstorming; we're all about making things happen. By giving your brilliant ideas the right tools, support, and a bit of tech magic, we're turning them into real, game-changing solutions. Our goal is to keep things fresh and exciting, making sure we're always on the cutting edge of what's possible at CTF PROJECTS.",
-            image: "/images/mission.png"
-        },
-        {
-            title: "Legacy",
-            content: "CTF Projects has had a rich legacy since 2007, giving life to ideas and enabling students to embark on their technical journey, fueling their ideas into reality. Many innovative projects have been set sail by CTF projects, and a few projects have been pushed to enroll as startups. CTF projects always strive to achieve better projects and provide technical knowledge and support to students.",
-            image: "/images/legacy.png"
-        }
-    ];
 
     const [activeCard, setActiveCard] = useState<number | null>(null);
 
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
+
     return (
         <div className='w-full h-screen flex flex-col justify-center items-center gap-4 md:flex-row
-                        pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'> 
+                        pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 ani'> 
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
-                    className='source_code_pro text-3xl max-[420px]:text-2xl max-xs text-[#1b1212] font-semibold'
+                    className='day-one text-3xl max-[420px]:text-2xl max-xs text-[#1b1212] font-semibold'
                 >Meet our purpose</p>
                 {cards.map((card, idx) => (
                     <div
@@ -65,6 +68,8 @@ const AboutUs = () => {
                         url={c.url}
                     /> 
                 ))}
+
+                <p className='text-center day-one'>Designed & Developed by CTF Projects & Research</p>
                 
             </div> 
 
