@@ -1,6 +1,26 @@
+import { useEffect, useState } from "react";
 import Drone from "../components/Drone";
+import Loader from "../components/Loader";
 
 const Home = () => {
+
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
 
     return (
         <div 

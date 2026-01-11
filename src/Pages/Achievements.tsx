@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AchievementCard from "../components/AchievementCard";
 import AchievementDetailCard from "../components/AchievementDetailCard";
 import { achievementData } from "../utils/achievenmentsData";
+import Loader from "../components/Loader";
 
 const Achievements = () => {
     
     const [achieveIdx, setAchieveIdx] = useState<number>(-1)
+
+    const[loader, setLoader] = useState<boolean>(true);
+    
+        useEffect(() => {
+            const timer = setTimeout(() => setLoader(false), 2500)
+    
+            return () => clearTimeout(timer)
+        }, [])
+    
+        if(loader){
+            return (
+                <div
+                    className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+                >
+                    <Loader/>
+                </div>
+            )
+        }
 
     return (
         <div             

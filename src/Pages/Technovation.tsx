@@ -1,33 +1,38 @@
 import {useState, useEffect} from 'react';
 import Countdown from '../components/CountDown';
+import Loader from '../components/Loader';
+import { images } from '../utils/technovationImages';
 
 const Technovation = () => {
-    const images = [
-        '/technovation-images/1.png',
-        '/technovation-images/2.jpg',
-        '/technovation-images/3.jpg',
-        '/technovation-images/4.jpg',
-        '/technovation-images/5.jpg',
-        '/technovation-images/6.jpg',
-        '/technovation-images/7.jpg',
-        '/technovation-images/8.jpg',
-        '/technovation-images/9.jpg',
-        '/technovation-images/10.jpg',
-        '/technovation-images/11.jpg',
-        '/technovation-images/12.jpg',
-        '/technovation-images/13.jpg',
-        '/technovation-images/14.jpg',
-    ]
+    
 
     const [currentImage, setCurrentImage] = useState<number>(0)
 
     useEffect(() => {
         const imageInterval = setInterval(() => {
             setCurrentImage(prev => (prev + 1) % images.length)
-        }, 2000);
+        }, 4000);
 
         return () => clearInterval(imageInterval)
     }, [])
+
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
 
     return (
         <div className='flex flex-col h-full w-full gap-10

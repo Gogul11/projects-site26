@@ -3,6 +3,7 @@ import Year from '../components/Year';
 import {yearWiseProjects} from '../utils/projectsdata.ts'
 import { BiLinkExternal } from "react-icons/bi";
 import Contact from '../components/Contact.tsx';
+import Loader from '../components/Loader.tsx';
 
 const Projects = () => {
 
@@ -16,6 +17,24 @@ const Projects = () => {
         const timer = setTimeout(() => setProjectId(-1), 0);
         return () => clearTimeout(timer);
     }, [year]);
+
+    const[loader, setLoader] = useState<boolean>(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoader(false), 2500)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    if(loader){
+        return (
+            <div
+                className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            >
+                <Loader/>
+            </div>
+        )
+    }
 
 
     return (
@@ -79,9 +98,10 @@ const Projects = () => {
                             {projects.map((project, idx) => (
                                 <div
                                     key={idx}
-                                    className='bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#1b1212]/10
-                                                text-white cursor-pointer
-                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip '
+                                    className={`bg-white/5 px-2 py-1 rounded-md max-md:whitespace-nowrap border border-[#1b1212]/10 cursor-pointer
+                                                hover:bg-white/10 backdrop-blur-2xl shadow-2xl w-[180px] h-8 overflow-clip
+                                                ${idx === projectId ? 'text-black font-semibold' : 'text-white'}
+                                                `}
                                     onClick={() => setProjectId(idx)}
                                 >
                                     {project.name}

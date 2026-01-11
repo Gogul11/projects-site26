@@ -1,0 +1,16 @@
+export const images = [
+        '/technovation-images/1.png',
+        '/technovation-images/2.jpg',
+        '/technovation-images/3.jpg',
+        '/technovation-images/4.jpg',
+        '/technovation-images/5.jpg',
+        '/technovation-images/6.jpg',
+        '/technovation-images/7.jpg',
+        '/technovation-images/8.jpg',
+        '/technovation-images/9.jpg',
+        '/technovation-images/10.jpg',
+        '/technovation-images/11.jpg',
+        '/technovation-images/12.jpg',
+        '/technovation-images/13.jpg',
+        '/technovation-images/14.jpg',
+]
