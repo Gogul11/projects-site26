@@ -30,7 +30,7 @@ const Projects = () => {
             year < 2025 
                 ? 
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl day-one'>CTF Research weren't unlocked in this timeline.</p>
+                        <p className='text-2xl day-one text-center'>CTF Research weren't unlocked in this timeline.</p>
 
                         <img
                             src="/images/gear.png"
@@ -45,7 +45,7 @@ const Projects = () => {
             year > new Date().getFullYear() 
                 ?
                     <div className='flex flex-col justify-center m-6 items-center gap-4'>
-                        <p className='text-2xl day-one'>Loading… something cool is on its way</p>
+                        <p className='text-2xl day-one text-center'>Loading… something cool is on its way</p>
 
                         <img
                             src="/images/gear.png"
@@ -60,7 +60,7 @@ const Projects = () => {
             researches.length === 0 
                 ?
                     <div className='w-full flex flex-col gap-10 justify-center items-center h-full my-10'>
-                        <p className='text-2xl day-one'>This year's researches are coming soon</p>
+                        <p className='text-2xl day-one text-center'>This year's researches are coming soon</p>
                         
                         <img
                             src="/images/gear.png"

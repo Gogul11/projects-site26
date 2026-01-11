@@ -48,7 +48,7 @@ const MobileViewNavbar = () => {
                                 rounded-2xl shadow-lg p-1
                                 flex flex-col justify-center
                                 items-center gap-5
-                                transform transition-all duration-300 z-50 text-lg
+                                transform transition-all duration-300 z-50 text-lg day-one
                                 ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 >
                     {items.map((item, idx) => (

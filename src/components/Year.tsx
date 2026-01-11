@@ -7,7 +7,7 @@ interface yearProps {
 }
 const Year:React.FC<yearProps> = (props) => {
     return (
-        <div className="flex gap-4 h-full justify-center items-center py-2">
+        <div className="flex gap-4 h-full justify-center items-center py-2 day-one">
             <IoMdArrowDropleftCircle 
                 onClick={() => props.setYear(prev => prev - 1)}
                 className="cursor-pointer"

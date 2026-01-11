@@ -26,7 +26,7 @@ const DesktopViewNavbar = () => {
                     onClick={() => navigate('https://www.cegtechforum.in/')} 
                     alt="ctf-image" />
             </div>
-            <div className='w-[70%] flex gap-6 justify-center text-md'>
+            <div className='w-[70%] flex gap-6 justify-center text-md day-one'>
                 {items.map((item, idx) => (
                     <Link 
                         key={idx}
