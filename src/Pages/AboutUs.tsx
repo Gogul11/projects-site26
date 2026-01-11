@@ -6,6 +6,7 @@ import { FaCaretSquareRight } from "react-icons/fa";
 import { contactData } from '../utils/contactData';
 import Loader from '../components/Loader';
 import { cards } from '../utils/aboutUsData';
+import { FaCircleInfo } from "react-icons/fa6";
 
 const AboutUs = () => {
 
@@ -69,7 +70,12 @@ const AboutUs = () => {
                     /> 
                 ))}
 
-                <p className='text-center day-one'>Designed & Developed by CTF Projects & Research</p>
+                <p className='text-center day-one flex items-center gap-4'>
+                    Designed & Developed by CTF Projects & Research
+                    <a href="https://gogul11.github.io/portfolio/" target='_blank'>
+                        <FaCircleInfo size={20}/>
+                    </a>
+                </p>
                 
             </div> 
 
