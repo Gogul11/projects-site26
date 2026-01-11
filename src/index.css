@@ -15,6 +15,14 @@ body{
     font-size: 16px;
 }
 
+.gradient{
+    background: #f85032;  
+    background: -webkit-linear-gradient(to bottom, #e73827, #f85032);  
+    background: linear-gradient(to bottom, #e73827, #f85032); 
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 .day-one{
     font-family: "Days One", sans-serif;
 }
@@ -65,4 +73,17 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.ani{
+  animation: dropDown 1000ms ease-in-out  1;
+}
+
+@keyframes dropDown {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
 }

@@ -39,7 +39,7 @@ const Projects = () => {
 
     return (
         <div
-            className='pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'
+            className='pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 ani'
         >
             <div className='h-14 w-full my-8'>
                 <Year year={year} setYear={setYear}/>

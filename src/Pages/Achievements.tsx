@@ -28,7 +28,7 @@ const Achievements = () => {
 
     return (
         <div             
-            className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 overflow-y-auto w-full'
+            className='pt-18 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 overflow-y-auto w-full  ani'
         >
             <div
                 className="my-8 flex flex-wrap gap-4 justify-center"

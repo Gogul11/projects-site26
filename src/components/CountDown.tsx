@@ -18,6 +18,7 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 
 		update();
 		const id = setInterval(update, 1000);
+		console.log(time)
 		return () => clearInterval(id);
 
 	}, [targetDate]);
@@ -43,19 +44,23 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 								z-30"
 				>
 				
-				{/* Numbers */}
-					<span 
+					{/* Numbers */}
+					{/* <span 
 							className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider"
 							style={{ color: "#fff", textShadow: "0 0 10px #fff" }}
 					>
 						{time.d}:{time.h}:{time.m}:{time.s}
-					</span>
+					</span> */}
 
 					{/* Labels */}
-					<span className="w-full text-center text-xs sm:text-sm md:text-lg lg:text-xl uppercase tracking-wide mt-1"
+					{/* <span className="w-full text-center text-xs sm:text-sm md:text-lg lg:text-xl uppercase tracking-wide mt-1"
 							style={{ color: "#1b1212" }}>
 						Days : Hours : Minutes : Seconds
-					</span>
+					</span> */}
+
+					<p
+						className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider day-one gradient text-transparent"
+					>COMING SOON</p>
 
 				</div>
 			</div>

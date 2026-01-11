@@ -11,7 +11,7 @@ interface props{
 
 const AchievementDetailCard : React.FC<props> = (props) => {
     return (    
-        <div className='fixed z-50 inset-0 bg-black/10 backdrop-blur-2xl p-10 overflow-y-auto'>
+        <div className='fixed z-50 inset-0 bg-black/10 backdrop-blur-2xl p-10 overflow-y-auto ani'>
             <button className="absolute top-8 right-8 text-white hover:text-[#1b1212]/50 z-10 cursor-pointer" onClick={props.onClose}>
                     <FaGear size={24} />
             </button>

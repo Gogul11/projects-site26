@@ -35,7 +35,7 @@ const Technovation = () => {
     }
 
     return (
-        <div className='flex flex-col h-full w-full gap-10
+        <div className='flex flex-col h-full w-full gap-10 ani
                         pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'>
 
             <div className='w-full flex flex-col 

@@ -32,7 +32,7 @@ const AboutUs = () => {
 
     return (
         <div className='w-full h-screen flex flex-col justify-center items-center gap-4 md:flex-row
-                        pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12'> 
+                        pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12 ani'> 
             
             <div className='h-[50%] w-full md:h-full md:w-[50%] flex flex-col gap-5 justify-center items-center'> 
                 <p
@@ -68,6 +68,8 @@ const AboutUs = () => {
                         url={c.url}
                     /> 
                 ))}
+
+                <p className='text-center day-one'>Designed & Developed by CTF Projects & Research</p>
                 
             </div> 
 

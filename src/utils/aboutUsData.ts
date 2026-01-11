@@ -2,12 +2,12 @@ export const cards = [
         {
             title: "Vision",
             content: "Giving life to ideas, acting as catalysts to enable students to turn their ideas into reality, and pushing these ideas forward to make them successful entrepreneurs.",
-            image: "/images/vision.png"
+            image: "/images/vision.jpeg"
         },
         {
             title: "Mission",
             content: "Here at CTF PROJECTS, our mission is all about bringing ideas to life in a cool and tech-savvy way. We're like the dream team for innovation! We want to create an awesome space where ideas not only survive but also thrive. We're not just brainstorming; we're all about making things happen. By giving your brilliant ideas the right tools, support, and a bit of tech magic, we're turning them into real, game-changing solutions. Our goal is to keep things fresh and exciting, making sure we're always on the cutting edge of what's possible at CTF PROJECTS.",
-            image: "/images/mission.png"
+            image: "/images/mission.jpeg"
         },
         {
             title: "Legacy",

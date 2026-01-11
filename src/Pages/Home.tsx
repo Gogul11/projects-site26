@@ -24,7 +24,7 @@ const Home = () => {
 
     return (
         <div 
-            className="h-screen w-full flex flex-col 
+            className="h-screen w-full flex flex-col ani
                         md:flex-row pt-16 px-14 max-sm:px-5 max-md:px-10 max-lg:px-12"
         >
             <div 
@@ -33,7 +33,10 @@ const Home = () => {
             >
                 <a 
                     className="text-[44px]
-                               text-[#1b1212] 
+                    bg-clip-text
+                               text-transparent
+                               font-bold
+                               gradient
                                day-one
                                sm:text-[54px]
                                md:text-[69px]
