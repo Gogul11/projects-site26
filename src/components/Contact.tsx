@@ -14,7 +14,7 @@ const Contact: React.FC<ContactProps> = (props) => {
         <div className={props.extraClass ?? 'w-full bg-white/5 backdrop-blur-md shadow-2xl h-20 rounded-2xl p-1 flex items-center md:w-[90%]'}>
 
             <div className='w-[70%] h-full px-2 flex flex-col justify-center'>
-                <p className="font-bold">{props.name}</p>
+                <p className="day-one">{props.name}</p>
                 {props.number && <p>{props.number}</p> }
                 {props.role && <p>{props.role}</p> }
             </div>
